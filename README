@@ -1,0 +1,23 @@
+=============
+Installation:
+=============
+
+git clone git@github.com:cristianrasch/dotvim.git ~/.vim
+ln -s ~/.vim/vimrc ~/.vimrc
+ln -s ~/.vim/gvimrc ~/.gvimrc
+cd ~/.vim
+git submodule update --init
+
+
+============================
+Upgrade all bundled plugins:
+============================
+
+git submodule foreach git pull origin master
+
+
+=================
+Add a new plugin:
+=================
+
+git submodule add http://github.com/tpope/vim-fugitive.git bundle/fugitive
