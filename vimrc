@@ -1,0 +1,68 @@
+execute pathogen#infect()
+
+set nocompatible
+set encoding=utf-8
+set linebreak
+set hidden
+set number
+set laststatus=2                  " Show status line
+set statusline=%y\ %f\ %=TL:\ %L
+set showmode                      " Show what mode you’re currently in
+set showcmd                       " Show what commands you’re typing
+set modeline                      " Allow modelines
+set ruler                         " Show current line and column position in file
+set title                         " Show file title in terminal tab
+set cursorline                    " Highlight current line
+set scrolloff=3
+set wildmenu                      " Enhanced command line completion.
+set wildmode=list:longest         " Complete files like a shell.
+set nobackup                      " Don't make a backup before overwriting a file.
+set nowritebackup                 " And again.
+set noswapfile                    " Don't save swap files.
+set background=dark
+
+syntax on
+colorscheme solarized
+filetype on
+filetype plugin on
+
+runtime macros/matchit.vim
+set runtimepath^=~/.vim/bundle/ctrlp.vim
+
+let mapleader = ","
+
+" Indententation
+filetype indent on
+set autoindent
+set ts=2 sts=2 sw=2 expandtab
+
+" Removes trailing whitespace on save
+autocmd BufWritePre * :%s/\s\+$//e
+
+map <F2> :NERDTreeToggle<CR>
+map <F5> :CommandTFlush<CR>
+
+" Bubble single lines
+nmap <C-Up> [e
+nmap <C-Down> ]e
+" Bubble multiple lines
+vmap <C-Up> [egv
+vmap <C-Down> ]egv
+
+" Remap code completion to Ctrl+Space
+inoremap <Nul> <C-n>
+
+" Search
+set incsearch
+set hlsearch " highlighting search matches
+set ignorecase
+set smartcase
+
+" Use <> chars instead of [] for the vim-unimpaired plugin
+nmap < [
+nmap > ]
+omap < [
+omap > ]
+xmap < [
+xmap > ]
+
