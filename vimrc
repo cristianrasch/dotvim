@@ -20,6 +20,8 @@ set nobackup                      " Don't make a backup before overwriting a fil
 set nowritebackup                 " And again.
 set noswapfile                    " Don't save swap files.
 set background=dark
+set history=100
+set autoread                      " Reload files changed outside vim
 
 syntax on
 colorscheme solarized
@@ -29,7 +31,7 @@ filetype plugin on
 runtime macros/matchit.vim
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 
-let mapleader = ","
+" let mapleader = ","
 
 " Indententation
 filetype indent on
@@ -66,3 +68,7 @@ omap > ]
 xmap < [
 xmap > ]
 
+nnoremap <C-J> <C-W><C-J> "Ctrl-j to move down a split
+nnoremap <C-K> <C-W><C-K> "Ctrl-k to move up a split
+nnoremap <C-L> <C-W><C-L> "Ctrl-l to move right a split
+nnoremap <C-H> <C-W><C-H> "Ctrl-h to move left a split
