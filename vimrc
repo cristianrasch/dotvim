@@ -22,6 +22,7 @@ set noswapfile                    " Don't save swap files.
 set background=dark
 set history=100
 set autoread                      " Reload files changed outside vim
+set clipboard=unnamed
 
 syntax on
 colorscheme solarized
