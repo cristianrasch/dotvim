@@ -43,7 +43,6 @@ set ts=2 sts=2 sw=2 expandtab
 autocmd BufWritePre * :%s/\s\+$//e
 
 map <F2> :NERDTreeToggle<CR>
-map <F5> :CommandTFlush<CR>
 
 " Bubble single lines
 nmap <C-Up> [e
@@ -69,6 +68,9 @@ omap > ]
 xmap < [
 xmap > ]
 
+" Splits
+set splitbelow
+set splitright
 nnoremap <C-J> <C-W><C-J> "Ctrl-j to move down a split
 nnoremap <C-K> <C-W><C-K> "Ctrl-k to move up a split
 nnoremap <C-L> <C-W><C-L> "Ctrl-l to move right a split
