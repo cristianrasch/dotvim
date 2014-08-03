@@ -6,7 +6,7 @@ set linebreak
 set hidden
 set number
 set laststatus=2                  " Show status line
-set statusline=%y\ %f\ %=TL:\ %L
+set statusline=%{fugitive#statusline()}\ %y\ %f\ %=TL:\ %L
 set showmode                      " Show what mode you’re currently in
 set showcmd                       " Show what commands you’re typing
 set modeline                      " Allow modelines
@@ -59,14 +59,6 @@ set incsearch
 set hlsearch " highlighting search matches
 set ignorecase
 set smartcase
-
-" Use <> chars instead of [] for the vim-unimpaired plugin
-nmap < [
-nmap > ]
-omap < [
-omap > ]
-xmap < [
-xmap > ]
 
 " Splits
 set splitbelow
