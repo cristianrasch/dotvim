@@ -32,8 +32,6 @@ filetype plugin on
 runtime macros/matchit.vim
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 
-" let mapleader = ","
-
 " Indententation
 filetype indent on
 set autoindent
@@ -67,3 +65,14 @@ nnoremap <C-J> <C-W><C-J> "Ctrl-j to move down a split
 nnoremap <C-K> <C-W><C-K> "Ctrl-k to move up a split
 nnoremap <C-L> <C-W><C-L> "Ctrl-l to move right a split
 nnoremap <C-H> <C-W><C-H> "Ctrl-h to move left a split
+
+" Tab navigation
+nnoremap th  :tabfirst<CR>
+nnoremap tj  :tabnext<CR>
+nnoremap tk  :tabprev<CR>
+nnoremap tl  :tablast<CR>
+nnoremap tt  :tabedit<Space>
+nnoremap tn  :tabnext<Space>
+nnoremap tm  :tabm<Space>
+nnoremap td  :tabclose<CR>
+
