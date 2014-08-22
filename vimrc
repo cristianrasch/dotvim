@@ -6,7 +6,7 @@ set linebreak
 set hidden
 set number
 set laststatus=2                  " Show status line
-set statusline=%{fugitive#statusline()}\ %y\ %f\ %=TL:\ %L
+set statusline=%y\ %f\ %=TL:\ %L
 set showmode                      " Show what mode you’re currently in
 set showcmd                       " Show what commands you’re typing
 set modeline                      " Allow modelines
@@ -22,7 +22,7 @@ set noswapfile                    " Don't save swap files.
 set background=dark
 set history=100
 set autoread                      " Reload files changed outside vim
-set clipboard=unnamed
+set clipboard=unnamedplus
 
 syntax on
 colorscheme solarized

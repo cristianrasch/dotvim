@@ -19,9 +19,6 @@
 [submodule "bundle/vim-commentary"]
 	path = bundle/vim-commentary
 	url = git@github.com:tpope/vim-commentary.git
-[submodule "bundle/matchit"]
-	path = bundle/matchit
-	url = git@github.com:tmhedberg/matchit.git
 [submodule "bundle/vim-rake"]
 	path = bundle/vim-rake
 	url = git@github.com:tpope/vim-rake.git
@@ -70,9 +67,6 @@
 [submodule "bundle/commentary"]
 	path = bundle/commentary
 	url = git@github.com:tpope/vim-commentary.git
-[submodule "bundle/fugitive"]
-	path = bundle/fugitive
-	url = git@github.com:tpope/vim-fugitive.git
 [submodule "bundle/qargs"]
 	path = bundle/qargs
 	url = git@github.com:nelstrom/vim-qargs.git
