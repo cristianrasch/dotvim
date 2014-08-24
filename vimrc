@@ -1,4 +1,5 @@
 execute pathogen#infect()
+" Helptags
 
 set nocompatible
 set encoding=utf-8
@@ -43,14 +44,14 @@ autocmd BufWritePre * :%s/\s\+$//e
 map <F2> :NERDTreeToggle<CR>
 
 " Bubble single lines
-nmap <C-Up> [e
-nmap <C-Down> ]e
+" nmap <C-Up> [e
+" nmap <C-Down> ]e
 " Bubble multiple lines
-vmap <C-Up> [egv
-vmap <C-Down> ]egv
+" vmap <C-Up> [egv
+" vmap <C-Down> ]egv
 
 " Remap code completion to Ctrl+Space
-inoremap <Nul> <C-n>
+" inoremap <Nul> <C-n>
 
 " Search
 set incsearch
@@ -58,7 +59,7 @@ set hlsearch " highlighting search matches
 set ignorecase
 set smartcase
 
-" Splits
+" Splits navigation
 set splitbelow
 set splitright
 nnoremap <C-J> <C-W><C-J> "Ctrl-j to move down a split
@@ -75,4 +76,10 @@ nnoremap tt  :tabedit<Space>
 nnoremap tn  :tabnext<Space>
 nnoremap tm  :tabm<Space>
 nnoremap td  :tabclose<CR>
+
+" Edit relative to the current file
+map <leader>ew :e <C-R>=expand("%:p:h") . "/" <CR>
+map <leader>es :sp <C-R>=expand("%:p:h") . "/" <CR>
+map <leader>ev :vsp <C-R>=expand("%:p:h") . "/" <CR>
+map <leader>et :tabe <C-R>=expand("%:p:h") . "/" <CR>
 
