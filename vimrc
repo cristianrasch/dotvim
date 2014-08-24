@@ -43,23 +43,13 @@ autocmd BufWritePre * :%s/\s\+$//e
 
 map <F2> :NERDTreeToggle<CR>
 
-" Bubble single lines
-" nmap <C-Up> [e
-" nmap <C-Down> ]e
-" Bubble multiple lines
-" vmap <C-Up> [egv
-" vmap <C-Down> ]egv
-
-" Remap code completion to Ctrl+Space
-" inoremap <Nul> <C-n>
-
 " Search
 set incsearch
 set hlsearch " highlighting search matches
 set ignorecase
 set smartcase
 
-" Splits navigation
+" Splits
 set splitbelow
 set splitright
 nnoremap <C-J> <C-W><C-J> "Ctrl-j to move down a split
