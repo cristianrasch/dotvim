@@ -2,7 +2,14 @@ execute pathogen#infect()
 " Helptags
 
 set nocompatible
+syntax on
+colorscheme solarized
+filetype on
+filetype plugin on
+
+set fileencoding=utf-8
 set encoding=utf-8
+set backspace=indent,eol,start
 set linebreak
 set hidden
 set number
@@ -25,11 +32,6 @@ set history=100
 set autoread                      " Reload files changed outside vim
 set clipboard=unnamedplus
 
-syntax on
-" colorscheme solarized
-filetype on
-filetype plugin on
-
 runtime macros/matchit.vim
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 
@@ -48,6 +50,7 @@ set incsearch
 set hlsearch " highlighting search matches
 set ignorecase
 set smartcase
+set gdefault
 
 " Splits
 set splitbelow
