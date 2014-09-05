@@ -26,7 +26,7 @@ set autoread                      " Reload files changed outside vim
 set clipboard=unnamedplus
 
 syntax on
-colorscheme solarized
+" colorscheme solarized
 filetype on
 filetype plugin on
 
@@ -73,3 +73,4 @@ map <leader>es :sp <C-R>=expand("%:p:h") . "/" <CR>
 map <leader>ev :vsp <C-R>=expand("%:p:h") . "/" <CR>
 map <leader>et :tabe <C-R>=expand("%:p:h") . "/" <CR>
 
+let delimitMate_matchpairs = "(:),[:],{:}"

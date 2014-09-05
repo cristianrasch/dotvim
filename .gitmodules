@@ -88,6 +88,3 @@
 [submodule "bundle/targets"]
 	path = bundle/targets
 	url = git://github.com/wellle/targets.vim.git
-[submodule "bundle/closetag"]
-	path = bundle/closetag
-	url = git@github.com:vim-scripts/closetag.vim.git
