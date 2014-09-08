@@ -35,24 +35,24 @@ set clipboard=unnamedplus
 runtime macros/matchit.vim
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 
-" Indententation
+" indententation
 filetype indent on
 set autoindent
-set ts=2 sts=2 sw=2 expandtab
+set tabstop=2 softtabstop=2 shiftwidth=2 expandtab
 
-" Removes trailing whitespace on save
+" removes trailing whitespace on save
 autocmd BufWritePre * :%s/\s\+$//e
 
 map <F2> :NERDTreeToggle<CR>
 
-" Search
+" search
 set incsearch
 set hlsearch " highlighting search matches
 set ignorecase
 set smartcase
 set gdefault
 
-" Splits
+" splits
 set splitbelow
 set splitright
 nnoremap <C-J> <C-W><C-J> "Ctrl-j to move down a split
@@ -60,7 +60,7 @@ nnoremap <C-K> <C-W><C-K> "Ctrl-k to move up a split
 nnoremap <C-L> <C-W><C-L> "Ctrl-l to move right a split
 nnoremap <C-H> <C-W><C-H> "Ctrl-h to move left a split
 
-" Tab navigation
+" tab navigation
 nnoremap th  :tabfirst<CR>
 nnoremap tj  :tabnext<CR>
 nnoremap tk  :tabprev<CR>
@@ -70,10 +70,20 @@ nnoremap tn  :tabnext<Space>
 nnoremap tm  :tabm<Space>
 nnoremap td  :tabclose<CR>
 
-" Edit relative to the current file
+" edit relative to the current file
 map <leader>ew :e <C-R>=expand("%:p:h") . "/" <CR>
 map <leader>es :sp <C-R>=expand("%:p:h") . "/" <CR>
 map <leader>ev :vsp <C-R>=expand("%:p:h") . "/" <CR>
 map <leader>et :tabe <C-R>=expand("%:p:h") . "/" <CR>
 
+" configure the deliMate plugin so that the '<' char
+" isn't automatically matched
 let delimitMate_matchpairs = "(:),[:],{:}"
+
+let mapleader=","
+
+" search using vim's 'very magic' mode
+" nnoremap / /\v
+" vnoremap / /\v
+" nnoremap ? ?\v
+" vnoremap ? ?\v
