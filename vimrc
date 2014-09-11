@@ -20,7 +20,7 @@ set title                         " Show file title in terminal tab
 set cursorline                    " Highlight current line
 set scrolloff=3
 set wildmenu                      " Enhanced command line completion.
-set wildmode=full                 " Complete files like a shell.
+set wildmode=longest,list         " Complete files like a shell.
 
 " every day editing options
 set backspace=indent,eol,start
