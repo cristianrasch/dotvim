@@ -104,3 +104,8 @@ set ttimeoutlen=100
 " UI options
 colorscheme solarized
 set background=dark
+
+" remap the up & down keys when scrolling through
+" the command line history
+cnoremap <C-p> <Up>
+cnoremap <C-n> <Down>
