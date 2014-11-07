@@ -34,7 +34,6 @@ set nrformats-=octal              " 0-prefixed numbers are still decimal
 
 " status line options
 set laststatus=2                  " Show status line
-set statusline=%y\ %f\ %=TL:\ %L
 set showmode                      " Show what mode you’re currently in
 set showcmd                       " Show what commands you’re typing
 set modeline                      " Allow modelines
@@ -109,3 +108,8 @@ set background=dark
 " the command line history
 cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>
+
+:nmap j gj
+:nmap k gk
+:nmap <C-n> :bnext<CR>
+:nmap <C-p> :bprev<CR>
