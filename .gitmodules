@@ -70,9 +70,6 @@
 [submodule "bundle/textobj-rubyblock"]
 	path = bundle/textobj-rubyblock
 	url = git@github.com:nelstrom/vim-textobj-rubyblock.git
-[submodule "bundle/ack"]
-	path = bundle/ack
-	url = https://github.com/mileszs/ack.vim
 [submodule "bundle/delimitMate"]
 	path = bundle/delimitMate
 	url = git@github.com:Raimondi/delimitMate.git
