@@ -94,3 +94,6 @@
 [submodule "bundle/closetag"]
 	path = bundle/closetag
 	url = git@github.com:vim-scripts/closetag.vim.git
+[submodule "bundle/unimpaired"]
+	path = bundle/unimpaired
+	url = git@github.com:tpope/vim-unimpaired.git

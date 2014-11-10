@@ -83,7 +83,7 @@ nnoremap tn  :tabnext<Space>
 nnoremap tm  :tabm<Space>
 nnoremap td  :tabclose<CR>
 
-let mapleader=","
+let g:ctrlp_show_hidden = 1
 
 " editing relative to the current file
 map <leader>ew :e <C-R>=expand("%:p:h") . "/" <CR>
