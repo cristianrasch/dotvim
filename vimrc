@@ -101,10 +101,6 @@ set timeout
 set timeoutlen=1000
 set ttimeoutlen=100
 
-" UI options
-colorscheme solarized
-set background=dark
-
 " remap the up & down keys when scrolling through
 " the command line history
 cnoremap <C-p> <Up>
@@ -114,3 +110,13 @@ cnoremap <C-n> <Down>
 :nmap k gk
 :nmap <C-n> :bnext<CR>
 :nmap <C-p> :bprev<CR>
+
+if has('gui_running')
+  colorscheme solarized
+  set background=dark
+  set guifont=Monospace\ 12
+  set guioptions-=m  "remove menu bar
+  set guioptions-=T  "remove toolbar
+  set guioptions-=r  "remove right-hand scroll bar
+  set guioptions-=L  "remove left-hand scroll bar
+endif
