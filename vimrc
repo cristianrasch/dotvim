@@ -74,16 +74,6 @@ nnoremap <C-K> <C-W><C-K> "Ctrl-k to move up a split
 nnoremap <C-L> <C-W><C-L> "Ctrl-l to move right a split
 nnoremap <C-H> <C-W><C-H> "Ctrl-h to move left a split
 
-" tab navigation shortcuts
-nnoremap th  :tabfirst<CR>
-nnoremap tj  :tabnext<CR>
-nnoremap tk  :tabprev<CR>
-nnoremap tl  :tablast<CR>
-nnoremap tt  :tabedit<Space>
-nnoremap tn  :tabnext<Space>
-nnoremap tm  :tabm<Space>
-nnoremap td  :tabclose<CR>
-
 let g:ctrlp_show_hidden = 1
 
 " editing relative to the current file
