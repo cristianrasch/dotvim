@@ -101,9 +101,10 @@ cnoremap <C-n> <Down>
 :nmap <C-n> :bnext<CR>
 :nmap <C-p> :bprev<CR>
 
+colorscheme solarized
+set background=dark
+
 if has('gui_running')
-  colorscheme solarized
-  set background=dark
   set guifont=Monospace\ 12
   set guioptions-=m  "remove menu bar
   set guioptions-=T  "remove toolbar

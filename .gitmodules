@@ -94,9 +94,9 @@
 [submodule "bundle/unimpaired"]
 	path = bundle/unimpaired
 	url = git@github.com:tpope/vim-unimpaired.git
-[submodule "ag"]
-	path = ag
-	url = git@github.com:rking/ag.vim.git
 [submodule "bundle/pasta"]
 	path = bundle/pasta
 	url = git://github.com/sickill/vim-pasta.git
+[submodule "bundle/sparkup"]
+	path = bundle/sparkup
+	url = git@github.com:rstacruz/sparkup.git
