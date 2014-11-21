@@ -97,3 +97,6 @@
 [submodule "ag"]
 	path = ag
 	url = git@github.com:rking/ag.vim.git
+[submodule "bundle/pasta"]
+	path = bundle/pasta
+	url = git://github.com/sickill/vim-pasta.git
