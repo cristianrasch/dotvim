@@ -103,3 +103,6 @@
 [submodule "bundle/ag"]
 	path = bundle/ag
 	url = git@github.com:rking/ag.vim.git
+[submodule "bundle/obvious-resize"]
+	path = bundle/obvious-resize
+	url = git@github.com:talek/obvious-resize.git

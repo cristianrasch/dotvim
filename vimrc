@@ -70,10 +70,10 @@ set gdefault
 " splits options and shortcuts
 set splitbelow
 set splitright
-nnoremap <C-J> <C-W><C-J> "Ctrl-j to move down a split
-nnoremap <C-K> <C-W><C-K> "Ctrl-k to move up a split
-nnoremap <C-L> <C-W><C-L> "Ctrl-l to move right a split
-nnoremap <C-H> <C-W><C-H> "Ctrl-h to move left a split
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
 
 let g:ctrlp_show_hidden = 1
 
@@ -112,3 +112,18 @@ if has('gui_running')
   set guioptions-=r  "remove right-hand scroll bar
   set guioptions-=L  "remove left-hand scroll bar
 endif
+
+function! s:try_wincmd(cmd, default)
+  if exists(':' . a:cmd)
+    let cmd = v:count ? join([a:cmd, v:count]) : a:cmd
+    execute cmd
+  else
+    execute join([v:count, 'wincmd', a:default])
+  endif
+endfunction
+
+nnoremap <silent> <C-Up>    :<C-u>call <SID>try_wincmd('ObviousResizeUp',    '+')<CR>
+nnoremap <silent> <C-Down>  :<C-u>call <SID>try_wincmd('ObviousResizeDown',  '-')<CR>
+nnoremap <silent> <C-Left>  :<C-u>call <SID>try_wincmd('ObviousResizeLeft',  '<')<CR>
+nnoremap <silent> <C-Right> :<C-u>call <SID>try_wincmd('ObviousResizeRight', '>')<CR>
+
