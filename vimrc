@@ -54,8 +54,6 @@ set shiftround                    " round > and < to multiples of shiftwidth
 
 " autocommands
 autocmd BufWritePre * :%s/\s\+$//e " removes trailing whitespace on save
-au! BufNewFile,BufRead *.erb,*.haml,*.mote setf html
-" au! BufNewFile,BufRead *.erb,*.rhtml,*.mote setf eruby
 
 " general mappings
 map <F2> :NERDTreeToggle<CR>
