@@ -100,8 +100,8 @@ cnoremap <C-n> <Down>
 :nmap <C-n> :bnext<CR>
 :nmap <C-p> :bprev<CR>
 
-colorscheme solarized
-set background=dark
+" colorscheme solarized
+" set background=dark
 
 if has('gui_running')
   set guifont=Monospace\ 12
