@@ -97,9 +97,9 @@
 [submodule "bundle/sparkup"]
 	path = bundle/sparkup
 	url = git@github.com:rstacruz/sparkup.git
-[submodule "bundle/ag"]
-	path = bundle/ag
-	url = git@github.com:rking/ag.vim.git
 [submodule "bundle/obvious-resize"]
 	path = bundle/obvious-resize
 	url = git@github.com:talek/obvious-resize.git
+[submodule "bundle/ack"]
+	path = bundle/ack
+	url = git@github.com:mileszs/ack.vim.git
