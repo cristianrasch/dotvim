@@ -74,6 +74,7 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
 let g:ctrlp_show_hidden = 1
+let g:ctrlp_custom_ignore = { 'dir': '\v[\/]\.?(git|hg|svn|bin)$' }
 
 " editing relative to the current file
 map <leader>ew :e <C-R>=expand("%:p:h") . "/" <CR>
