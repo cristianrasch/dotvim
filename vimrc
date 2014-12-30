@@ -21,6 +21,7 @@ set cursorline                    " Highlight current line
 set scrolloff=3
 set wildmenu                      " Enhanced command line completion.
 set wildmode=longest,list         " Complete files like a shell.
+set lazyredraw
 
 " every day editing options
 set backspace=indent,eol,start
