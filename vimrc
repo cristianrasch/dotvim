@@ -5,7 +5,8 @@ execute pathogen#infect()
 set nocompatible
 syntax on
 filetype on
-filetype plugin indent on
+filetype plugin on
+filetype indent on
 
 " encoding options
 set fileencoding=utf-8
@@ -15,23 +16,31 @@ set encoding=utf-8
 set number
 set linebreak
 set hidden
-set ruler                         " Show current line and column position in file
-set title                         " Show file title in terminal tab
-set cursorline                    " Highlight current line
+set ruler                          " Show current line and column position in file
+set title                          " Show file title in terminal tab
+set cursorline                     " Highlight current line
 set scrolloff=3
-set wildmenu                      " Enhanced command line completion.
-set wildmode=longest,list         " Complete files like a shell.
+set wildmenu                       " Enhanced command line completion.
+set wildmode=longest,list          " Complete files like a shell.
 set lazyredraw
+set colorcolumn=80                 " 80 column
+" Switch between tabs
+nnoremap <C-l> gt
+nnoremap <C-h> gT
+nnoremap <C-n> :tabnew<cr>         " New tab
+cmap w!! w !sudo tee > /dev/null % " sudo write
 
 " every day editing options
 set backspace=indent,eol,start
-set nobackup                      " Don't make a backup before overwriting a file.
-set nowritebackup                 " And again.
-set noswapfile                    " Don't save swap files.
+set nobackup                       " Don't make a backup before overwriting a file.
+set nowritebackup                  " And again.
+set noswapfile                     " Don't save swap files.
 set history=100
-set autoread                      " Reload files changed outside vim
+set autoread                       " Reload files changed outside vim
 set clipboard=unnamedplus
-set nrformats-=octal              " 0-prefixed numbers are still decimal
+set nrformats-=octal               " 0-prefixed numbers are still decimal
+set listchars=nbsp:·,tab:▸\ ,eol:¬ " Invisible characters, à la TextMate
+set list
 
 " status line options
 set laststatus=2                  " Show status line
@@ -56,6 +65,9 @@ set shiftround                    " round > and < to multiples of shiftwidth
 " autocommands
 autocmd BufWritePre * :%s/\s\+$//e " removes trailing whitespace on save
 
+" filetypes
+autocmd BufRead,BufNewFile *.md setfiletype markdown
+
 " general mappings
 map <F2> :NERDTreeToggle<CR>
 
@@ -75,7 +87,7 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
 let g:ctrlp_show_hidden = 1
-let g:ctrlp_custom_ignore = { 'dir': '\v[\/]\.?(git|hg|svn|bin)$' }
+let g:ctrlp_custom_ignore = { 'dir': '\v[\/]\.?(git|svn|bin)$' }
 
 " editing relative to the current file
 map <leader>ew :e <C-R>=expand("%:p:h") . "/" <CR>
