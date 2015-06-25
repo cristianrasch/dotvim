@@ -106,3 +106,9 @@
 [submodule "bundle/sexp"]
 	path = bundle/sexp
 	url = git@github.com:guns/vim-sexp.git
+[submodule "bundle/javascript-syntax"]
+	path = bundle/javascript-syntax
+	url = git@github.com:jelera/vim-javascript-syntax.git
+[submodule "bundle/javascript"]
+	path = bundle/javascript
+	url = git@github.com:pangloss/vim-javascript.git
