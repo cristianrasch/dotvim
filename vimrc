@@ -113,6 +113,7 @@ nnoremap <silent> <C-Left>  :<C-u>call <SID>try_wincmd('ObviousResizeLeft',  '<'
 nnoremap <silent> <C-Right> :<C-u>call <SID>try_wincmd('ObviousResizeRight', '>')<CR>
 
 " Coloring options
+set t_Co=256
 colorscheme solarized
 set background=dark
 
