@@ -89,10 +89,16 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
-" Tab switching
-nnoremap <C-l> gt
-nnoremap <C-h> gT
-nnoremap <C-n> :tabnew<cr> " New tab
+" Tab navigation
+nnoremap th  :tabfirst<CR>
+nnoremap tj  :tabnext<CR>
+nnoremap tk  :tabprev<CR>
+nnoremap tl  :tablast<CR>
+nnoremap tt  :tabedit<Space>
+nnoremap tn  :tabnew<CR>
+nnoremap tm  :tabm<Space>
+nnoremap td  :tabclose<CR>
+nnoremap to  :tabonly<CR>
 
 " Remap the up & down keys when scrolling through " the command line history
 cnoremap <C-p> <Up>
