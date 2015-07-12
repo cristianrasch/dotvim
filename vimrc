@@ -78,8 +78,6 @@ autocmd BufRead,BufNewFile *.md setfiletype markdown
 " Navigation mappings
 :nmap j gj
 :nmap k gk
-:nmap <C-n> :bnext<CR>
-:nmap <C-p> :bprev<CR>
 
 " Split options
 set splitbelow
