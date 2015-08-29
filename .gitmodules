@@ -100,12 +100,6 @@
 [submodule "bundle/gitignore"]
 	path = bundle/gitignore
 	url = git@github.com:vim-scripts/gitignore.git
-[submodule "bundle/clojure-static"]
-	path = bundle/clojure-static
-	url = git@github.com:guns/vim-clojure-static.git
-[submodule "bundle/sexp"]
-	path = bundle/sexp
-	url = git@github.com:guns/vim-sexp.git
 [submodule "bundle/javascript-syntax"]
 	path = bundle/javascript-syntax
 	url = git@github.com:jelera/vim-javascript-syntax.git
