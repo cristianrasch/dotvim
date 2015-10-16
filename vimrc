@@ -1,4 +1,4 @@
-execute pathogen#infect()
+call pathogen#infect()                      " use pathogen
 " Helptags
 
 " Important general settings
@@ -22,21 +22,22 @@ set hidden
 set ruler                          " Show current line and column position in file
 set title                          " Show file title in terminal tab
 set cursorline                     " Highlight current line
+set showmatch                      " highlight matching [{()}]
 set scrolloff=3
 set wildmenu                       " Enhanced command line completion.
 set wildmode=longest,list          " Complete files like a shell.
-set lazyredraw
+set lazyredraw                     " for faster macros"
 set colorcolumn=80                 " 80 column
 
 " Indententation options
 filetype indent on
 set autoindent
 set smartindent
-set tabstop=2
-set softtabstop=2
+set tabstop=2                      " number of visual spaces per TAB
+set softtabstop=2                  " number of spaces in tab when editing
 set shiftwidth=2
-set expandtab
-set shiftround                    " round > and < to multiples of shiftwidth
+set expandtab                      " tabs are spaces
+set shiftround                     " round > and < to multiples of shiftwidth
 
 " Everyday editing options
 set backspace=indent,eol,start
@@ -62,10 +63,13 @@ cmap c! !gcc -std=c11 -o%:r % && ./%:r
 
 " Search options
 set incsearch
-set hlsearch " highlighting search matches
+set hlsearch                      " highlighting search matches
 set ignorecase
 set smartcase
 set gdefault
+" turn off search highlight
+nnoremap <leader><space> :nohlsearch<CR>
+nnoremap <leader>a :Ag            " open ag.vim
 
 " Status line options
 set laststatus=2                  " Show status line
@@ -77,6 +81,7 @@ set modeline                      " Allow modelines
 autocmd BufRead,BufNewFile *.md setfiletype markdown
 
 " Navigation mappings
+" Move vertically by visual line
 :nmap j gj
 :nmap k gk
 
@@ -141,6 +146,9 @@ map <F2> :NERDTreeToggle<CR>
 
 " Plugin configuration
 " Ctrlp
+let g:ctrlp_match_window = 'bottom,order:ttb'
+let g:ctrlp_switch_buffer = 0
+let g:ctrlp_working_path_mode = 0
 let g:ctrlp_show_hidden = 1
 let g:ctrlp_custom_ignore = { 'dir': '\v[\/]\.?(git|svn|bin)$' }
 " Make Ctrl-P plugin lot faster for git projects
