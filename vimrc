@@ -58,8 +58,7 @@ map <leader>ew :e <C-R>=expand("%:p:h") . "/" <CR>
 map <leader>es :sp <C-R>=expand("%:p:h") . "/" <CR>
 map <leader>ev :vsp <C-R>=expand("%:p:h") . "/" <CR>
 map <leader>et :tabe <C-R>=expand("%:p:h") . "/" <CR>
-cmap w!! w !sudo tee > /dev/null %                      " sudo write
-cmap c! !gcc -std=c11 -o%:r % && ./%:r
+cmap w!! w !sudo tee > /dev/null % " sudo write
 
 " Search options
 set incsearch
@@ -69,7 +68,8 @@ set smartcase
 set gdefault
 " turn off search highlight
 nnoremap <leader><space> :nohlsearch<CR>
-nnoremap <leader>a :Ag            " open ag.vim
+" open ag.vim
+nnoremap <leader>a :Ag<space>
 
 " Status line options
 set laststatus=2                  " Show status line
@@ -166,5 +166,5 @@ endif
 " deliMate
 " Configure the deliMate plugin so that the '<' char
 " isn't automatically matched
-let delimitMate_matchpairs = "(:),[:],{:}"
+" let delimitMate_matchpairs = "(:),[:],{:}"
 
