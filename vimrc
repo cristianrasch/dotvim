@@ -27,7 +27,6 @@ set scrolloff=3
 set wildmenu                       " Enhanced command line completion.
 set wildmode=longest,list          " Complete files like a shell.
 set lazyredraw                     " for faster macros"
-set colorcolumn=80                 " 80 column
 
 " Indententation options
 filetype indent on
@@ -40,16 +39,17 @@ set expandtab                      " tabs are spaces
 set shiftround                     " round > and < to multiples of shiftwidth
 
 " Everyday editing options
-set backspace=indent,eol,start
 set nobackup                       " Don't make a backup before overwriting a file.
 set nowritebackup                  " And again.
 set noswapfile                     " Don't save swap files.
+set backspace=indent,eol,start
 set history=100
 set autoread                       " Reload files changed outside vim
 set clipboard=unnamedplus
 set nrformats-=octal               " 0-prefixed numbers are still decimal
-set listchars=nbsp:·,tab:▸\ ,eol:¬ " Invisible characters, à la TextMate
 set list
+set listchars=nbsp:·,tab:▸\ ,eol:¬ " Invisible characters, à la TextMate
+set colorcolumn=80                 " 80 column
 autocmd BufWritePre * :%s/\s\+$//e " removes trailing whitespace on save
 
 " Editing shortcuts
@@ -77,7 +77,7 @@ set showmode                      " Show what mode you’re currently in
 set showcmd                       " Show what commands you’re typing
 set modeline                      " Allow modelines
 
-" Filetypes
+" Filetype mappings
 autocmd BufRead,BufNewFile *.md setfiletype markdown
 
 " Navigation mappings
@@ -136,7 +136,7 @@ if has('gui_running')
   set guioptions-=L           "remove left-hand scroll bar
 endif
 
-" Fixes and workarounds
+" Fixes & workarounds
 set timeout
 set timeoutlen=1000
 set ttimeoutlen=100
@@ -163,6 +163,7 @@ else
     \ 'AcceptSelection("e")': ['<space>', '<cr>', '<2-LeftMouse>'],
     \ }
 endif
+
 " deliMate
 " Configure the deliMate plugin so that the '<' char
 " isn't automatically matched
