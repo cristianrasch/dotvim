@@ -145,6 +145,8 @@ set ttimeoutlen=100
 map <F2> :NERDTreeToggle<CR>
 
 " Plugin configuration
+" CamelCaseMotion
+call camelcasemotion#CreateMotionMappings(',')
 " Ctrlp
 let g:ctrlp_match_window = 'bottom,order:ttb'
 let g:ctrlp_switch_buffer = 0
