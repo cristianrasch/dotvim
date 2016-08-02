@@ -106,9 +106,6 @@
 [submodule "bundle/fugitive"]
 	path = bundle/fugitive
 	url = git@github.com:tpope/vim-fugitive.git
-[submodule "bundle/rust"]
-	path = bundle/rust
-	url = git@github.com:rust-lang/rust.vim.git
 [submodule "airline"]
 	path = airline
 	url = git@github.com:vim-airline/vim-airline.git
