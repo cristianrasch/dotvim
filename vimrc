@@ -108,6 +108,11 @@ nnoremap to  :tabonly<CR>
 cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>
 
+" Visual block mode
+" Move selected block up/down
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
+
 " Easier window resizing
 function! s:try_wincmd(cmd, default)
   if exists(':' . a:cmd)
@@ -166,9 +171,4 @@ else
     \ 'AcceptSelection("e")': ['<space>', '<cr>', '<2-LeftMouse>'],
     \ }
 endif
-
-" deliMate
-" Configure the deliMate plugin so that the '<' char
-" isn't automatically matched
-" let delimitMate_matchpairs = "(:),[:],{:}"
 
