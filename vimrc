@@ -134,6 +134,7 @@ set background=dark
 
 " GUI options
 if has('gui_running')
+  set lines=40 columns=99
   set guifont=Monospace\ 12
   set guioptions-=m           "remove menu bar
   set guioptions-=T           "remove toolbar
