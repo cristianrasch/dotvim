@@ -26,7 +26,7 @@ set showmatch                      " highlight matching [{()}]
 set scrolloff=3
 set wildmenu                       " Enhanced command line completion.
 set wildmode=longest,list          " Complete files like a shell.
-set lazyredraw                     " for faster macros"
+set lazyredraw                     " redraw only when we need to
 
 " Indententation options
 filetype indent on
@@ -39,9 +39,14 @@ set expandtab                      " tabs are spaces
 set shiftround                     " round > and < to multiples of shiftwidth
 
 " Everyday editing options
-set nobackup                       " Don't make a backup before overwriting a file.
-set nowritebackup                  " And again.
-set noswapfile                     " Don't save swap files.
+set undodir=~/.Vim/undo//
+set backup
+set backupdir=~/.Vim/bkp//
+set writebackup
+set directory=~/.Vim/swp//
+" set nobackup                       " Don't make a backup before overwriting a file.
+" set nowritebackup                  " And again.
+" set noswapfile                     " Don't save swap files.
 set backspace=indent,eol,start
 set history=100
 set autoread                       " Reload files changed outside vim
@@ -157,15 +162,13 @@ call camelcasemotion#CreateMotionMappings(',')
 " let g:ctrlp_map = '<c-p>'
 let g:ctrlp_match_window = 'bottom,order:ttb'
 let g:ctrlp_switch_buffer = 0
-let g:ctrlp_working_path_mode = 0
-let g:ctrlp_show_hidden = 1
-let g:ctrlp_custom_ignore = { 'dir': '\v[\/]\.?(git|svn|bin)$' }
+let g:ctrlp_working_path = 0
 " Make Ctrl-P plugin lot faster for git projects
 let g:ctrlp_use_caching = 0
 if executable('ag')
     set grepprg=ag\ --nogroup\ --nocolor
 
-    let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+    let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
 else
   let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
   let g:ctrlp_prompt_mappings = {
