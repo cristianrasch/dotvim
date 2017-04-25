@@ -176,3 +176,4 @@ else
     \ }
 endif
 
+let g:rustfmt_autosave = 1
