@@ -39,11 +39,11 @@ set expandtab                      " tabs are spaces
 set shiftround                     " round > and < to multiples of shiftwidth
 
 " Everyday editing options
-set undodir=~/.Vim/undo//
+set undodir=~/.Vim/undo
 set backup
-set backupdir=~/.Vim/bkp//
+set backupdir=~/.Vim/bkp
 set writebackup
-set directory=~/.Vim/swp//
+set directory=~/.Vim/swp
 " set nobackup                       " Don't make a backup before overwriting a file.
 " set nowritebackup                  " And again.
 " set noswapfile                     " Don't save swap files.
