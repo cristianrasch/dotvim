@@ -112,3 +112,6 @@
 [submodule "bundle/rust"]
 	path = bundle/rust
 	url = git@github.com:rust-lang/rust.vim.git
+[submodule "bundle/typescript"]
+	path = bundle/typescript
+	url = git@github.com:leafgarland/typescript-vim.git
