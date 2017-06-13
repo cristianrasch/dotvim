@@ -26,6 +26,7 @@ set showmatch                      " highlight matching [{()}]
 set scrolloff=3
 set wildmenu                       " Enhanced command line completion.
 set wildmode=longest,list          " Complete files like a shell.
+set visualbell
 set lazyredraw                     " redraw only when we need to
 
 " Indententation options
@@ -75,11 +76,13 @@ set gdefault
 nnoremap <leader><space> :nohlsearch<CR>
 " open ag.vim
 nnoremap <leader>a :Ag<space>
+nnoremap / /\v                    " Turn on vim's very magic mode
+vnoremap / /\v
 
 " Status line options
 set laststatus=2                  " Show status line
-set showmode                      " Show what mode you’re currently in
-set showcmd                       " Show what commands you’re typing
+set showmode                      " Show what mode you're currently in
+set showcmd                       " Show what commands you're typing
 set modeline                      " Allow modelines
 
 " Filetype mappings
