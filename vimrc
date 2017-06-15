@@ -57,6 +57,11 @@ set list
 set listchars=nbsp:·,tab:▸\ ,eol:¬ " Invisible characters, à la TextMate
 set colorcolumn=80                 " 80 column
 autocmd BufWritePre * :%s/\s\+$//e " removes trailing whitespace on save
+augroup autoSaveAndRead
+  autocmd!
+  autocmd TextChanged,InsertLeave,FocusLost * silent! wall
+  autocmd CursorHold * silent! checktime
+augroup END
 
 " Editing shortcuts
 nnoremap Y y$
@@ -69,7 +74,7 @@ cmap w!! w !sudo tee > /dev/null % " sudo write
 " Search options
 set incsearch
 set hlsearch                      " highlighting search matches
-set ignorecase
+set infercase
 set smartcase
 set gdefault
 " turn off search highlight
@@ -155,6 +160,9 @@ endif
 set timeout
 set timeoutlen=1000
 set ttimeoutlen=100
+
+" Macro helpers
+xnoremap Q :'<,'>:normal @q<CR>
 
 " Plugin mappings
 map <F2> :NERDTreeToggle<CR>
