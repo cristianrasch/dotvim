@@ -76,7 +76,8 @@ set gdefault
 nnoremap <leader><space> :nohlsearch<CR>
 " open ag.vim
 nnoremap <leader>a :Ag<space>
-nnoremap / /\v                    " Turn on vim's very magic mode
+" Turn on vim's very magic mode
+nnoremap / /\v
 vnoremap / /\v
 
 " Status line options
