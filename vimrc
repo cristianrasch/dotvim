@@ -143,8 +143,6 @@ nnoremap <silent> <C-Right> :<C-u>call <SID>try_wincmd('ObviousResizeRight', '>'
 
 " Coloring options
 set t_Co=256
-" colorscheme solarized
-" set background=dark
 
 " GUI options
 if has('gui_running')
@@ -154,6 +152,8 @@ if has('gui_running')
   set guioptions-=T           "remove toolbar
   set guioptions-=r           "remove right-hand scroll bar
   set guioptions-=L           "remove left-hand scroll bar
+  colorscheme solarized
+  set background=dark
 endif
 
 " Fixes & workarounds
