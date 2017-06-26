@@ -143,8 +143,8 @@ nnoremap <silent> <C-Right> :<C-u>call <SID>try_wincmd('ObviousResizeRight', '>'
 
 " Coloring options
 set t_Co=256
-colorscheme solarized
-set background=dark
+" colorscheme solarized
+" set background=dark
 
 " GUI options
 if has('gui_running')
