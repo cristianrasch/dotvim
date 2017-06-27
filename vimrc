@@ -49,7 +49,7 @@ set nobackup                       " Don't make a backup before overwriting a fi
 set nowritebackup                  " And again.
 set noswapfile                     " Don't save swap files.
 set backspace=indent,eol,start
-set history=100
+set history=200
 set autoread                       " Reload files changed outside vim
 set clipboard=unnamedplus
 set nrformats-=octal               " 0-prefixed numbers are still decimal
