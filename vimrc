@@ -41,13 +41,13 @@ set shiftround                     " round > and < to multiples of shiftwidth
 
 " Everyday editing options
 set undodir=~/.Vim/undo
-" set backup
-" set backupdir=~/.Vim/bkp
-" set writebackup
-" set directory=~/.Vim/swp
-set nobackup                       " Don't make a backup before overwriting a file.
-set nowritebackup                  " And again.
-set noswapfile                     " Don't save swap files.
+set backup
+set backupdir=~/.Vim/bkp
+set writebackup
+set directory=~/.Vim/swp
+" set nobackup                       " Don't make a backup before overwriting a file.
+" set nowritebackup                  " And again.
+" set noswapfile                     " Don't save swap files.
 set backspace=indent,eol,start
 set history=200
 set autoread                       " Reload files changed outside vim
@@ -56,13 +56,13 @@ set nrformats-=octal               " 0-prefixed numbers are still decimal
 set list
 set listchars=nbsp:·,tab:▸\ ,eol:¬ " Invisible characters, à la TextMate
 set colorcolumn=80                 " 80 column
-" autocmd BufWritePre * :%s/\s\+$//e " removes trailing whitespace on save
-augroup autoSaveAndRead
-  autocmd!
-  autocmd TextChanged,InsertLeave,FocusLost * silent! :%s/\s\+$//e
-  autocmd TextChanged,InsertLeave,FocusLost * silent! wall
-  autocmd CursorHold * silent! checktime
-augroup END
+autocmd BufWritePre * :%s/\s\+$//e " removes trailing whitespace on save
+" augroup autoSaveAndRead
+"   autocmd!
+"   autocmd TextChanged,InsertLeave,FocusLost * silent! :%s/\s\+$//e
+"   autocmd TextChanged,InsertLeave,FocusLost * silent! wall
+"   autocmd CursorHold * silent! checktime
+" augroup END
 
 " Editing shortcuts
 nnoremap Y y$
