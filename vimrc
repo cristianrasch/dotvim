@@ -174,22 +174,20 @@ map <F2> :NERDTreeToggle<CR>
 " CamelCaseMotion
 call camelcasemotion#CreateMotionMappings(',')
 " Ctrlp
-let g:ctrlp_cmd = 'CtrlPMRU'
-let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_switch_buffer = 0
 let g:ctrlp_working_path = 0
 " Make Ctrl-P plugin lot faster for git projects
 let g:ctrlp_use_caching = 0
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
-if executable('ag')
-    set grepprg=ag\ --nogroup\ --nocolor
+" if executable('ag')
+"     set grepprg=ag\ --nogroup\ --nocolor
 
-    let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
-else
-  let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
-  let g:ctrlp_prompt_mappings = {
-    \ 'AcceptSelection("e")': ['<space>', '<cr>', '<2-LeftMouse>'],
-    \ }
-endif
+"     let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
+" else
+"   let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
+"   let g:ctrlp_prompt_mappings = {
+"     \ 'AcceptSelection("e")': ['<space>', '<cr>', '<2-LeftMouse>'],
+"     \ }
+" endif
 
 let g:rustfmt_autosave = 1
