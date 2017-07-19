@@ -174,6 +174,7 @@ map <F2> :NERDTreeToggle<CR>
 " CamelCaseMotion
 call camelcasemotion#CreateMotionMappings(',')
 " Ctrlp
+let g:ctrlp_cmd = 'CtrlPMRU'
 let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_switch_buffer = 0
 let g:ctrlp_working_path = 0
