@@ -26,6 +26,7 @@ set showmatch                      " highlight matching [{()}]
 set scrolloff=3
 set wildmenu                       " Enhanced command line completion.
 set wildmode=longest,list          " Complete files like a shell.
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 set visualbell
 set lazyredraw                     " redraw only when we need to
 
@@ -155,8 +156,8 @@ if has('gui_running')
   set guioptions-=r           "remove right-hand scroll bar
   set guioptions-=L           "remove left-hand scroll bar
   colorscheme solarized
-  set background=dark
 endif
+set background=light
 
 " Fixes & workarounds
 set timeout
@@ -173,12 +174,12 @@ map <F2> :NERDTreeToggle<CR>
 " CamelCaseMotion
 call camelcasemotion#CreateMotionMappings(',')
 " Ctrlp
-" let g:ctrlp_map = '<c-p>'
-let g:ctrlp_match_window = 'bottom,order:ttb'
+let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_switch_buffer = 0
 let g:ctrlp_working_path = 0
 " Make Ctrl-P plugin lot faster for git projects
 let g:ctrlp_use_caching = 0
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 if executable('ag')
     set grepprg=ag\ --nogroup\ --nocolor
 
