@@ -177,5 +177,3 @@ let g:ctrlp_working_path = 0
 " Make Ctrl-P plugin lot faster for git projects
 let g:ctrlp_use_caching = 0
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
-
-let g:rustfmt_autosave = 1
