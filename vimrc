@@ -42,13 +42,13 @@ set shiftround                     " round > and < to multiples of shiftwidth
 
 " Everyday editing options
 " set undofile " Maintain undo history between sessions
-" set undodir=~/.Vim/undo
+" set undodir=~/.Vim/undo,/tmp
 " set nobackup                       " Don't make a backup before overwriting a file.
 " set nowritebackup                  " And again.
 set backup
-set backupdir=~/.Vim/bkp
+set backupdir=~/.Vim/bkp,/tmp
 set writebackup
-set directory=~/.Vim/swp
+set directory=~/.Vim/swp,/tmp
 " set noswapfile                     " Don't save swap files.
 set backspace=indent,eol,start
 set history=200
@@ -57,7 +57,9 @@ set clipboard=unnamedplus
 set nrformats-=octal               " 0-prefixed numbers are still decimal
 set list
 set listchars=nbsp:·,tab:▸\ ,eol:¬ " Invisible characters, à la TextMate
+set textwidth=79                   " Text wrapping
 set colorcolumn=80                 " 80 column
+set nowrap
 autocmd BufWritePre * :%s/\s\+$//e " removes trailing whitespace on save
 " augroup autoSaveAndRead
 "   autocmd!
@@ -77,8 +79,8 @@ cmap w!! w !sudo tee > /dev/null % " sudo write
 " Search options
 set incsearch
 set hlsearch                      " highlighting search matches
-set infercase
-set smartcase
+set ignorecase
+set smartcase                     " don't ignore capitals in searches
 set gdefault
 " turn off search highlight
 nnoremap <leader><space> :nohlsearch<CR>
@@ -110,6 +112,11 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
+" Buffer navigation
+nnoremap <C-H> :bp <enter>
+nnoremap <C-L> :bn <enter>
+nnoremap <leader>q :bd <enter>
+
 " Tab navigation
 nnoremap th  :tabfirst<CR>
 nnoremap tj  :tabnext<CR>
@@ -120,15 +127,6 @@ nnoremap tn  :tabnew<CR>
 nnoremap tm  :tabm<Space>
 nnoremap td  :tabclose<CR>
 nnoremap to  :tabonly<CR>
-
-" Remap the up & down keys when scrolling through " the command line history
-cnoremap <C-p> <Up>
-cnoremap <C-n> <Down>
-
-" Visual block mode
-" Move selected block up/down
-vnoremap J :m '>+1<CR>gv=gv
-vnoremap K :m '<-2<CR>gv=gv
 
 " Easier window resizing
 function! s:try_wincmd(cmd, default)
