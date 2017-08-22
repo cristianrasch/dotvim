@@ -113,7 +113,7 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
 " Buffer navigation
-nnoremap <leader>q :bd <enter>
+nnoremap <leader>q :bd! <enter>
 
 " Tab navigation
 nnoremap th  :tabfirst<CR>
