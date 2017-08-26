@@ -59,7 +59,6 @@ set list
 set listchars=nbsp:·,tab:▸\ ,eol:¬ " Invisible characters, à la TextMate
 set textwidth=79                   " Text wrapping
 set colorcolumn=80                 " 80 column
-set nowrap
 autocmd BufWritePre * :%s/\s\+$//e " removes trailing whitespace on save
 " augroup autoSaveAndRead
 "   autocmd!
