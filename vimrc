@@ -4,7 +4,6 @@ call pathogen#infect()                      " use pathogen
 " Important general settings
 set nocompatible
 syntax on
-filetype on
 filetype plugin on
 
 " Runtime options
@@ -25,8 +24,8 @@ set cursorline                     " Highlight current line
 set showmatch                      " highlight matching [{()}]
 set scrolloff=3
 set wildmenu                       " Enhanced command line completion.
-set wildmode=longest,list          " Complete files like a shell.
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip
+set wildmode=list:longest,full
+set wildignore+=*/tmp/*,*.so,*.swp
 set visualbell
 set lazyredraw                     " redraw only when we need to
 
@@ -85,9 +84,14 @@ set gdefault
 nnoremap <leader><space> :nohlsearch<CR>
 " open ack.vim
 nnoremap <leader>a :Ack<space>
+set magic                         " For regular expressions turn magic on
 " Turn on vim's very magic mode
 nnoremap / /\v
 vnoremap / /\v
+cnoremap %s/ %smagic/
+cnoremap \>s/ \>smagic/
+nnoremap :g/ :g/\v
+nnoremap :g// :g//
 
 " Status line options
 set laststatus=2                  " Show status line
