@@ -88,10 +88,6 @@ set magic                         " For regular expressions turn magic on
 " Turn on vim's very magic mode
 nnoremap / /\v
 vnoremap / /\v
-cnoremap %s/ %smagic/
-cnoremap \>s/ \>smagic/
-nnoremap :g/ :g/\v
-nnoremap :g// :g//
 
 " Status line options
 set laststatus=2                  " Show status line
