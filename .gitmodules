@@ -85,9 +85,6 @@
 [submodule "bundle/obvious-resize"]
 	path = bundle/obvious-resize
 	url = git@github.com:talek/obvious-resize.git
-[submodule "bundle/gitignore"]
-	path = bundle/gitignore
-	url = git@github.com:vim-scripts/gitignore.git
 [submodule "bundle/javascript"]
 	path = bundle/javascript
 	url = git@github.com:pangloss/vim-javascript.git
@@ -109,3 +106,6 @@
 [submodule "bundle/ack"]
 	path = bundle/ack
 	url = git@github.com:mileszs/ack.vim.git
+[submodule "bundle/unimpaired"]
+	path = bundle/unimpaired
+	url = git@github.com:tpope/vim-unimpaired.git
