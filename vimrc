@@ -110,6 +110,10 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+nnoremap <silent> <leader>s :split<CR>
+nnoremap <silent> <leader>v :vsplit<CR>
+nnoremap <silent> <leader>q :close<CR>
+noremap <silent> <leader>z :tab split<CR>
 
 " Buffer navigation
 nnoremap <leader>q :bd! <enter>
