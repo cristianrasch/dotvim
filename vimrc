@@ -41,14 +41,14 @@ set shiftround                     " round > and < to multiples of shiftwidth
 
 " Everyday editing options
 " set undofile " Maintain undo history between sessions
-" set undodir=~/.Vim/undo,/tmp
+" set undodir=~/.Vim/undo//,/tmp//
 " set nobackup                       " Don't make a backup before overwriting a file.
 " set nowritebackup                  " And again.
-set backup
-set backupdir=~/.Vim/bkp,/tmp
-set writebackup
-set directory=~/.Vim/swp,/tmp
-" set noswapfile                     " Don't save swap files.
+" set backup
+" set backupdir=~/.Vim/bkp//,/tmp//
+" set writebackup
+" set directory=~/.Vim/swp//,/tmp//
+set noswapfile                     " Don't save swap files.
 set backspace=indent,eol,start
 set history=200
 set autoread                       " Reload files changed outside vim
@@ -59,12 +59,6 @@ set listchars=nbsp:·,tab:▸\ ,eol:¬ " Invisible characters, à la TextMate
 set textwidth=79                   " Text wrapping
 set colorcolumn=80                 " 80 column
 autocmd BufWritePre * :%s/\s\+$//e " removes trailing whitespace on save
-" augroup autoSaveAndRead
-"   autocmd!
-"   autocmd TextChanged,InsertLeave,FocusLost * silent! :%s/\s\+$//e
-"   autocmd TextChanged,InsertLeave,FocusLost * silent! wall
-"   autocmd CursorHold * silent! checktime
-" augroup END
 
 " Editing shortcuts
 nnoremap Y y$
