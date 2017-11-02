@@ -109,3 +109,6 @@
 [submodule "bundle/unimpaired"]
 	path = bundle/unimpaired
 	url = git@github.com:tpope/vim-unimpaired.git
+[submodule "bundle/rust"]
+	path = bundle/rust
+	url = git@github.com:rust-lang/rust.vim.git

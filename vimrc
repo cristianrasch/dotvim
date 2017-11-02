@@ -176,3 +176,5 @@ let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif
+
+let g:rustfmt_autosave = 1
