@@ -97,9 +97,6 @@
 [submodule "ctrlp"]
 	path = ctrlp
 	url = git@github.com:ctrlpvim/ctrlp.vim.git
-[submodule "bundle/airline"]
-	path = bundle/airline
-	url = git@github.com:vim-airline/vim-airline.git
 [submodule "bundle/ctrlp"]
 	path = bundle/ctrlp
 	url = git@github.com:ctrlpvim/ctrlp.vim.git
@@ -112,3 +109,6 @@
 [submodule "bundle/rust"]
 	path = bundle/rust
 	url = git@github.com:rust-lang/rust.vim.git
+[submodule "bundle/airline"]
+	path = bundle/airline
+	url = git@github.com:vim-airline/vim-airline.git

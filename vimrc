@@ -24,7 +24,7 @@ set cursorline                     " Highlight current line
 set showmatch                      " highlight matching [{()}]
 set scrolloff=3
 set wildmenu                       " Enhanced command line completion.
-set wildmode=list:longest,full
+set wildmode=longest,list
 set wildignore+=*/tmp/*,*.so,*.swp
 set visualbell
 set lazyredraw                     " redraw only when we need to
@@ -42,8 +42,8 @@ set shiftround                     " round > and < to multiples of shiftwidth
 " Everyday editing options
 " set undofile " Maintain undo history between sessions
 " set undodir=~/.Vim/undo//,/tmp//
-" set nobackup                       " Don't make a backup before overwriting a file.
-" set nowritebackup                  " And again.
+set nobackup                       " Don't make a backup before overwriting a file.
+set nowritebackup                  " And again.
 " set backup
 " set backupdir=~/.Vim/bkp//,/tmp//
 " set writebackup
@@ -59,6 +59,7 @@ set listchars=nbsp:·,tab:▸\ ,eol:¬ " Invisible characters, à la TextMate
 set textwidth=79                   " Text wrapping
 set colorcolumn=80                 " 80 column
 set synmaxcol=256                  " Don't highlight syntax pass this column
+set switchbuf=useopen
 autocmd BufWritePre * :%s/\s\+$//e " removes trailing whitespace on save
 
 " Editing shortcuts
