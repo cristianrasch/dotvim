@@ -24,7 +24,7 @@ set cursorline                     " Highlight current line
 set showmatch                      " highlight matching [{()}]
 set scrolloff=3
 set wildmenu                       " Enhanced command line completion.
-set wildmode=longest,list
+set wildmode=list:longest,full
 set wildignore+=*/tmp/*,*.so,*.swp
 set visualbell
 set lazyredraw                     " redraw only when we need to
