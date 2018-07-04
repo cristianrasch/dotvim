@@ -60,6 +60,7 @@ set textwidth=79                   " Text wrapping
 set colorcolumn=80                 " 80 column
 set synmaxcol=256                  " Don't highlight syntax pass this column
 set switchbuf=useopen
+set pastetoggle=<F3>
 autocmd BufWritePre * :%s/\s\+$//e " removes trailing whitespace on save
 
 " Editing shortcuts
