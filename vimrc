@@ -153,9 +153,9 @@ if has('gui_running')
   set guioptions-=L           "remove left-hand scroll bar
   colorscheme solarized
 else
-  colorscheme zenburn
+  set background=dark
+  colorscheme gruvbox
 endif
-" set background=light
 
 " Fixes & workarounds
 set timeout
