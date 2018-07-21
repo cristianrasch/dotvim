@@ -112,3 +112,9 @@
 [submodule "bundle/CamelCaseMotion"]
 	path = bundle/CamelCaseMotion
 	url = git@github.com:bkad/CamelCaseMotion.git
+[submodule "bundle/gruvbox"]
+	path = bundle/gruvbox
+	url = git@github.com:morhetz/gruvbox.git
+[submodule "bundle/zenburn"]
+	path = bundle/zenburn
+	url = git@github.com:jnurmine/Zenburn.git
