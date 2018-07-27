@@ -67,9 +67,6 @@
 [submodule "bundle/targets"]
 	path = bundle/targets
 	url = git://github.com/wellle/targets.vim.git
-[submodule "bundle/pasta"]
-	path = bundle/pasta
-	url = git://github.com/sickill/vim-pasta.git
 [submodule "bundle/sparkup"]
 	path = bundle/sparkup
 	url = git@github.com:rstacruz/sparkup.git
