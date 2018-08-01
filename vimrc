@@ -166,7 +166,7 @@ set ttimeoutlen=100
 xnoremap Q :'<,'>:normal @q<CR>
 
 " Plugin mappings
-map <F2> :NERDTreeToggle<CR>
+map <F2> :Vex<CR>
 
 " Plugin configuration
 " CamelCaseMotion
