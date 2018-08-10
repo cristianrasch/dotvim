@@ -55,3 +55,6 @@
 [submodule "bundle/autotag"]
 	path = bundle/autotag
 	url = git@github.com:craigemery/vim-autotag.git
+[submodule "bundle/pasta"]
+	path = bundle/pasta
+	url = git@github.com:sickill/vim-pasta.git

@@ -168,10 +168,10 @@ xnoremap Q :'<,'>:normal @q<CR>
 " Plugin mappings
 map <F2> :Vex<CR>
 
-" Plugin configuration
-" CamelCaseMotion
+" Plugin configs
+
 call camelcasemotion#CreateMotionMappings(',')
-" Ctrlp
+
 let g:ctrlp_switch_buffer = 0
 let g:ctrlp_working_path = 0
 " Make Ctrl-P plugin lot faster for git projects
@@ -193,3 +193,5 @@ let g:netrw_winsize = 25
 let g:netrw_list_hide = '\(^\|\s\s\)\zs\.\S\+,\(^\|\s\s\)ntuser\.\S\+'
 let g:netrw_hide = 1
 let g:netrw_dirhistmax = 0
+
+let g:pasta_disabled_filetypes = ['python', 'coffee', 'yaml']
