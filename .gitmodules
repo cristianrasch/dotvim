@@ -22,9 +22,6 @@
 [submodule "bundle/targets"]
 	path = bundle/targets
 	url = git://github.com/wellle/targets.vim.git
-[submodule "bundle/sparkup"]
-	path = bundle/sparkup
-	url = git@github.com:rstacruz/sparkup.git
 [submodule "bundle/obvious-resize"]
 	path = bundle/obvious-resize
 	url = git@github.com:talek/obvious-resize.git
@@ -52,3 +49,6 @@
 [submodule "bundle/unimpaired"]
 	path = bundle/unimpaired
 	url = git@github.com:tpope/vim-unimpaired.git
+[submodule "bundle/emmet"]
+	path = bundle/emmet
+	url = git@github.com:mattn/emmet-vim.git

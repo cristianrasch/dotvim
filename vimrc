@@ -195,3 +195,14 @@ let g:netrw_hide = 1
 let g:netrw_dirhistmax = 0
 
 let g:pasta_disabled_filetypes = ['python', 'coffee', 'yaml']
+
+let g:user_emmet_install_global = 0
+autocmd FileType html,css,eruby EmmetInstall
+let g:user_emmet_settings = {
+\  'xml' : {
+\    'extends' : 'html',
+\  },
+\  'erb' : {
+\    'extends' : 'html',
+\  },
+\}
