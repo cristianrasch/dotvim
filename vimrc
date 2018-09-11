@@ -69,7 +69,8 @@ map <leader>ew :e <C-R>=expand("%:p:h") . "/" <CR>
 map <leader>es :sp <C-R>=expand("%:p:h") . "/" <CR>
 map <leader>ev :vsp <C-R>=expand("%:p:h") . "/" <CR>
 map <leader>et :tabe <C-R>=expand("%:p:h") . "/" <CR>
-cmap w!! w !sudo tee > /dev/null % " sudo write
+cnoremap w!! execute 'silent! write !sudo tee % >/dev/null' <bar> edit!
+" cmap w!! w !sudo tee > /dev/null % " sudo write
 
 " Search options
 set incsearch
