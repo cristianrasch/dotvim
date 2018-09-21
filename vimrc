@@ -142,7 +142,7 @@ nnoremap <silent> <C-Left>  :<C-u>call <SID>try_wincmd('ObviousResizeLeft',  '<'
 nnoremap <silent> <C-Right> :<C-u>call <SID>try_wincmd('ObviousResizeRight', '>')<CR>
 
 " Coloring options
-set background=dark
+colorscheme gruvbox
 " set t_Co=256
 
 " GUI options
@@ -153,9 +153,12 @@ if has('gui_running')
   set guioptions-=T           "remove toolbar
   set guioptions-=r           "remove right-hand scroll bar
   set guioptions-=L           "remove left-hand scroll bar
-  colorscheme solarized
+endif
+
+if hostname() == "laptop"
+  set background=light
 else
-  colorscheme gruvbox
+  set background=dark
 endif
 
 " Fixes & workarounds
