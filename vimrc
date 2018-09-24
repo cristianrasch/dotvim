@@ -40,6 +40,7 @@ set expandtab                      " tabs are spaces
 set shiftround                     " round > and < to multiples of shiftwidth
 
 " Everyday editing options
+set noundofile
 " set undofile " Maintain undo history between sessions
 " set undodir=~/.Vim/undo//,/tmp//
 set nobackup                       " Don't make a backup before overwriting a file.
@@ -56,6 +57,7 @@ set clipboard=unnamedplus
 set nrformats-=octal               " 0-prefixed numbers are still decimal
 set list
 set listchars=nbsp:·,tab:▸\ ,eol:¬ " Invisible characters, à la TextMate
+set wrap
 set textwidth=79                   " Text wrapping
 set colorcolumn=80                 " 80 column
 set synmaxcol=256                  " Don't highlight syntax pass this column
