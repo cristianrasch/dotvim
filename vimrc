@@ -67,11 +67,16 @@ autocmd BufWritePre * :%s/\s\+$//e " removes trailing whitespace on save
 
 " Editing shortcuts
 nnoremap Y y$
+let mapleader = "\<Space>"
 map <leader>ew :e <C-R>=expand("%:p:h") . "/" <CR>
 map <leader>es :sp <C-R>=expand("%:p:h") . "/" <CR>
 map <leader>ev :vsp <C-R>=expand("%:p:h") . "/" <CR>
 map <leader>et :tabe <C-R>=expand("%:p:h") . "/" <CR>
 cnoremap w!! execute 'silent! write !sudo tee % >/dev/null' <bar> edit!
+" Split edit your vimrc. Type space, v, r in sequence to trigger
+nmap <leader>vr :tabe $MYVIMRC<cr>
+" Source (reload) your vimrc. Type space, s, o in sequence to trigger
+nmap <leader>so :source $MYVIMRC<cr>
 " cmap w!! w !sudo tee > /dev/null % " sudo write
 
 " Search options
