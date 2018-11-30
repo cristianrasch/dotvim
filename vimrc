@@ -33,9 +33,9 @@ set lazyredraw                     " redraw only when we need to
 filetype indent on
 set autoindent
 set smartindent
-set tabstop=2                      " number of visual spaces per TAB
-set softtabstop=2                  " number of spaces in tab when editing
-set shiftwidth=2
+" set tabstop=2                      " number of visual spaces per TAB
+" set softtabstop=2                  " number of spaces in tab when editing
+" set shiftwidth=2
 set expandtab                      " tabs are spaces
 set shiftround                     " round > and < to multiples of shiftwidth
 
@@ -63,6 +63,7 @@ set colorcolumn=80                 " 80 column
 set synmaxcol=256                  " Don't highlight syntax pass this column
 set switchbuf=useopen
 set pastetoggle=<F3>
+
 autocmd BufWritePre * :%s/\s\+$//e " removes trailing whitespace on save
 
 " Editing shortcuts
