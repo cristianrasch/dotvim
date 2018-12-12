@@ -33,9 +33,9 @@ set lazyredraw                     " redraw only when we need to
 filetype indent on
 set autoindent
 set smartindent
-" set tabstop=2                      " number of visual spaces per TAB
-" set softtabstop=2                  " number of spaces in tab when editing
-" set shiftwidth=2
+set tabstop=2                      " number of visual spaces per TAB
+set softtabstop=2                  " number of spaces in tab when editing
+set shiftwidth=2
 set expandtab                      " tabs are spaces
 set shiftround                     " round > and < to multiples of shiftwidth
 
