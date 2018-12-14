@@ -207,7 +207,7 @@ let g:netrw_list_hide = '\(^\|\s\s\)\zs\.\S\+,\(^\|\s\s\)ntuser\.\S\+'
 let g:netrw_hide = 1
 let g:netrw_dirhistmax = 0
 
-let g:pasta_disabled_filetypes = ['python', 'coffee', 'yaml']
+let g:pasta_disabled_filetypes = ['python', 'coffee', 'yaml', 'ctrlp']
 
 let g:user_emmet_install_global = 0
 autocmd FileType html,css,eruby EmmetInstall
