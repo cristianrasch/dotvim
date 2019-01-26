@@ -164,11 +164,12 @@ if has('gui_running')
   set guioptions-=L           "remove left-hand scroll bar
 endif
 
-if hostname() == "laptop"
-  set background=light
-else
-  set background=dark
-endif
+set background=dark
+" if hostname() == "laptop"
+"   set background=light
+" else
+"   set background=dark
+" endif
 
 " Fixes & workarounds
 set timeout
