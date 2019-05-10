@@ -31,9 +31,6 @@
 [submodule "bundle/ack"]
 	path = bundle/ack
 	url = git@github.com:mileszs/ack.vim.git
-[submodule "bundle/rust"]
-	path = bundle/rust
-	url = git@github.com:rust-lang/rust.vim.git
 [submodule "bundle/airline"]
 	path = bundle/airline
 	url = git@github.com:vim-airline/vim-airline.git
@@ -58,3 +55,6 @@
 [submodule "bundle/rake"]
 	path = bundle/rake
 	url = git@github.com:tpope/vim-rake.git
+[submodule "polyglot"]
+	path = polyglot
+	url = git@github.com:sheerun/vim-polyglot.git
