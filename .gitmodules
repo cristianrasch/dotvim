@@ -58,3 +58,6 @@
 [submodule "polyglot"]
 	path = polyglot
 	url = git@github.com:sheerun/vim-polyglot.git
+[submodule "bundle/polyglot"]
+	path = bundle/polyglot
+	url = git@github.com:sheerun/vim-polyglot.git
