@@ -220,3 +220,5 @@ let g:user_emmet_settings = {
 \    'extends' : 'html',
 \  },
 \}
+
+let g:autotagCtagsCmd='ctags --recurse --languages=ruby .'

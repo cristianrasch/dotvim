@@ -52,9 +52,6 @@
 [submodule "bundle/bundler"]
 	path = bundle/bundler
 	url = git@github.com:tpope/vim-bundler.git
-[submodule "bundle/rake"]
-	path = bundle/rake
-	url = git@github.com:tpope/vim-rake.git
 [submodule "polyglot"]
 	path = polyglot
 	url = git@github.com:sheerun/vim-polyglot.git
