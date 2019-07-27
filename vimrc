@@ -54,9 +54,9 @@ set nobackup
 set backupcopy=auto
 " patch required to honor double slash at end
 if has("patch-8.1.0251")
-	" consolidate the writebackups -- not a big
-	" deal either way, since they usually get deleted
-	set backupdir^=~/.Vim/backup//
+  " consolidate the writebackups -- not a big
+  " deal either way, since they usually get deleted
+  set backupdir^=~/.Vim/backup//
 end
 set noundofile
 set backspace=indent,eol,start
@@ -88,6 +88,13 @@ nmap <leader>vr :tabe $MYVIMRC<cr>
 " Source (reload) your vimrc. Type space, s, o in sequence to trigger
 nmap <leader>so :source $MYVIMRC<cr>
 " cmap w!! w !sudo tee > /dev/null % " sudo write
+" shortcuts for 3-way merge
+map <Leader>1 :diffget LOCAL<CR>
+map <Leader>2 :diffget BASE<CR>
+map <Leader>3 :diffget REMOTE<CR>
+if has("patch-8.1.0360")
+  set diffopt+=internal,algorithm:patience
+endif
 
 " Search options
 set incsearch
