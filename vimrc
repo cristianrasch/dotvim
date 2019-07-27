@@ -40,16 +40,25 @@ set expandtab                      " tabs are spaces
 set shiftround                     " round > and < to multiples of shiftwidth
 
 " Everyday editing options
+" Protect changes between writes. Default values of
+" updatecount (200 keystrokes) and updatetime
+" (4 seconds) are fine
+" mkdir -p ~/.Vim/{swap,backup}
+set swapfile
+set directory^=~/.Vim/swap//
+" protect against crash-during-write
+set writebackup
+" but do not persist backup after successful write
+set nobackup
+" use rename-and-write-new method whenever safe
+set backupcopy=auto
+" patch required to honor double slash at end
+if has("patch-8.1.0251")
+	" consolidate the writebackups -- not a big
+	" deal either way, since they usually get deleted
+	set backupdir^=~/.Vim/backup//
+end
 set noundofile
-" set undofile " Maintain undo history between sessions
-" set undodir=~/.Vim/undo//,/tmp//
-set nobackup                       " Don't make a backup before overwriting a file.
-set nowritebackup                  " And again.
-" set backup
-" set backupdir=~/.Vim/bkp//,/tmp//
-" set writebackup
-" set directory=~/.Vim/swp//,/tmp//
-set noswapfile                     " Don't save swap files.
 set backspace=indent,eol,start
 set history=200
 set autoread                       " Reload files changed outside vim
