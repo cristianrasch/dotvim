@@ -8,7 +8,7 @@ filetype plugin on
 
 " Runtime options
 runtime macros/matchit.vim
-set runtimepath^=~/.vim/bundle/ctrlp.vim
+set rtp+=~/.fzf
 
 " Encoding options
 set fileencoding=utf-8
@@ -106,6 +106,12 @@ set gdefault
 nnoremap <leader><space> :nohlsearch<CR>
 " open ack.vim
 nnoremap <leader>a :Ack<space>
+nnoremap <C-p> :Files<Cr>
+nmap <Leader>f :GFiles<CR>
+nmap <Leader>F :Files<CR>
+nmap <Leader>b :Buffers<CR>
+nmap <Leader>t :Tags<CR>
+nmap <Leader>/ :Rg<Space>
 set magic                         " For regular expressions turn magic on
 " Turn on vim's very magic mode
 nnoremap / /\v
@@ -214,12 +220,6 @@ map <F2> :Vex<CR>
 
 call camelcasemotion#CreateMotionMappings(',')
 
-let g:ctrlp_switch_buffer = 0
-let g:ctrlp_working_path = 0
-" Make Ctrl-P plugin lot faster for git projects
-let g:ctrlp_use_caching = 0
-let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
-
 if executable('rg')
   let g:ackprg = 'rg --vimgrep'
 endif
@@ -239,7 +239,7 @@ let g:netrw_list_hide = '\(^\|\s\s\)\zs\.\S\+,\(^\|\s\s\)ntuser\.\S\+'
 let g:netrw_hide = 1
 let g:netrw_dirhistmax = 0
 
-let g:pasta_disabled_filetypes = ['python', 'coffee', 'yaml', 'ctrlp']
+let g:pasta_disabled_filetypes = ['python', 'coffee', 'yaml']
 
 let g:user_emmet_install_global = 0
 autocmd FileType html,css,eruby EmmetInstall
