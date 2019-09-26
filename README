@@ -5,7 +5,7 @@ Installation:
 git clone git@github.com:cristianrasch/dotvim.git ~/.vim
 cd ~/.vim
 git submodule update --init
-sudo apt-get install -y silversearcher-ag exuberant-ctags
+sudo apt-get install -y ripgrep exuberant-ctags
 ```
 
 Add a new plugin:
