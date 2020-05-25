@@ -16,6 +16,7 @@ set encoding=utf-8
 
 " Convenience options
 set number
+set relativenumber
 set linebreak
 set hidden
 set ruler                          " Show current line and column position in file
