@@ -29,6 +29,8 @@ set wildmode=list:longest,full
 set wildignore+=*/tmp/*,*.so,*.swp
 set visualbell
 set lazyredraw                     " redraw only when we need to
+" set spell
+set spelllang=en_us,es_es
 
 " Indententation options
 filetype indent on
