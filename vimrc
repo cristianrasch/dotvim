@@ -96,6 +96,7 @@ nmap <leader>so :source $MYVIMRC<cr>
 map <Leader>1 :diffget LOCAL<CR>
 map <Leader>2 :diffget BASE<CR>
 map <Leader>3 :diffget REMOTE<CR>
+map <Leader>w :w<CR>
 if has("patch-8.1.0360")
   set diffopt+=internal,algorithm:patience
 endif
@@ -120,6 +121,8 @@ set magic                         " For regular expressions turn magic on
 " Turn on vim's very magic mode
 nnoremap / /\v
 vnoremap / /\v
+" Make . work w/ visually selected lines
+vnoremap . :normal.<CR>
 
 " Status line options
 set laststatus=2                  " Show status line
@@ -146,6 +149,9 @@ set suffixesadd+=.rb,.js,.py
 " Move vertically by visual line
 :nmap j gj
 :nmap k gk
+" Move visual selection
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
 
 " Split options
 set splitbelow
