@@ -27,6 +27,7 @@ set scrolloff=3
 set wildmenu                       " Enhanced command line completion.
 set wildmode=list:longest,full
 set wildignore+=*/tmp/*,*.so,*.swp
+set noerrorbells
 set visualbell
 set lazyredraw                     " redraw only when we need to
 " set spell
@@ -218,6 +219,7 @@ xnoremap Q :'<,'>:normal @q<CR>
 
 " Plugin mappings
 map <F2> :Vex<CR>
+" map <F2> :Lexplore<CR>
 
 " Plugin configs
 
@@ -237,7 +239,7 @@ let g:netrw_banner = 0
 " 1 = horiz split, 2 vert split, 3 new tab, 4 prev win
 let g:netrw_browse_split = 4
 let g:netrw_altv = 1
-let g:netrw_winsize = 25
+let g:netrw_winsize = 20
 let g:netrw_list_hide = '\(^\|\s\s\)\zs\.\S\+,\(^\|\s\s\)ntuser\.\S\+'
 let g:netrw_hide = 1
 let g:netrw_dirhistmax = 0
