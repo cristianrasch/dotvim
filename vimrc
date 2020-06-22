@@ -265,4 +265,5 @@ let g:user_emmet_settings = {
 \  },
 \}
 
-let g:autotagCtagsCmd='ctags --recurse --languages=ruby .'
+let g:autotagCtagsCmd='ctags --recurse --languages=ruby,python .'
+let g:autotagStopAt='/home/cristian/Documents/workspace'
