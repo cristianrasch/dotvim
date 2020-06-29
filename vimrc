@@ -113,7 +113,8 @@ set gdefault
 nnoremap <leader><space> :nohlsearch<CR>
 " open ack.vim
 nnoremap <leader>a :Ack<space>
-nnoremap <C-p> :GFiles --exclude-standard --others --cached<Cr>
+nnoremap <leader>l :LAck<space>
+nnoremap <C-p> :GFiles --exclude-standard --others --cached<CR>
 nmap <Leader>f :GFiles<CR>
 nmap <Leader>F :Files<CR>
 nmap <Leader>b :Buffers<CR>
