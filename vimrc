@@ -99,6 +99,7 @@ map <Leader>1 :diffget LOCAL<CR>
 map <Leader>2 :diffget BASE<CR>
 map <Leader>3 :diffget REMOTE<CR>
 map <Leader>w :w<CR>
+map <leader>D :put =strftime('# %a %Y-%m-%d %H:%M:%S%z')<CR>
 if has("patch-8.1.0360")
   set diffopt+=internal,algorithm:patience
 endif
