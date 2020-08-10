@@ -121,6 +121,7 @@ nmap <Leader>F :Files<CR>
 nmap <Leader>b :Buffers<CR>
 nmap <Leader>t :Tags<CR>
 nmap <Leader>/ :Rg<Space>
+map <leader>* :Ack <cword><CR>
 set magic                         " For regular expressions turn magic on
 " Turn on vim's very magic mode
 nnoremap / /\v
