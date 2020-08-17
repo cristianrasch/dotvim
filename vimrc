@@ -270,3 +270,13 @@ let g:user_emmet_settings = {
 
 let g:autotagCtagsCmd='ctags --recurse --languages=ruby,python .'
 let g:autotagStopAt='/home/cristian/Documents/workspace'
+
+" Copy the contents of the quickfix list to the args list
+command! -nargs=0 -bar Qargs execute 'args' QuickfixFilenames()
+function! QuickfixFilenames()
+  let buffer_numbers = {}
+  for quickfix_item in getqflist()
+    let buffer_numbers[quickfix_item['bufnr']] = bufname(quickfix_item['bufnr'])
+  endfor
+  return join(map(values(buffer_numbers), 'fnameescape(v:val)'))
+endfunction
