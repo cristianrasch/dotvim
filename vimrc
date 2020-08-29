@@ -68,6 +68,7 @@ set history=200
 set autoread                       " Reload files changed outside vim
 set clipboard=unnamedplus
 set nrformats-=octal               " 0-prefixed numbers are still decimal
+set nrformats+=alpha               " Ctrl-X/Ctrl-A can increment letters too
 set list
 set listchars=nbsp:·,tab:▸\ ,eol:¬ " Invisible characters, à la TextMate
 set wrap
