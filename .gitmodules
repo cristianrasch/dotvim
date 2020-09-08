@@ -61,9 +61,6 @@
 [submodule "bundle/abolish"]
 	path = bundle/abolish
 	url = git@github.com:tpope/vim-abolish.git
-[submodule "bundle/go"]
-	path = bundle/go
-	url = https://github.com/fatih/vim-go.git
 [submodule "bundle/rust"]
 	path = bundle/rust
 	url = https://github.com/rust-lang/rust.vim
