@@ -22,6 +22,7 @@ set hidden
 set ruler                          " Show current line and column position in file
 set title                          " Show file title in terminal tab
 set cursorline                     " Highlight current line
+set cursorcolumn                   " Enable column highlighting
 set showmatch                      " highlight matching [{()}]
 set scrolloff=3
 set wildmenu                       " Enhanced command line completion.
