@@ -46,9 +46,6 @@
 [submodule "bundle/emmet"]
 	path = bundle/emmet
 	url = git@github.com:mattn/emmet-vim.git
-[submodule "bundle/bundler"]
-	path = bundle/bundler
-	url = git@github.com:tpope/vim-bundler.git
 [submodule "polyglot"]
 	path = polyglot
 	url = git@github.com:sheerun/vim-polyglot.git
