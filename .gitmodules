@@ -1,63 +1,60 @@
 [submodule "bundle/endwise"]
 	path = bundle/endwise
-	url = git@github.com:tpope/vim-endwise.git
+	url = https://github.com/tpope/vim-endwise.git
 [submodule "bundle/surround"]
 	path = bundle/surround
-	url = git@github.com:tpope/vim-surround.git
+	url = https://github.com/tpope/vim-surround.git
 [submodule "bundle/textobj-user"]
 	path = bundle/textobj-user
-	url = git@github.com:kana/vim-textobj-user.git
+	url = https://github.com/kana/vim-textobj-user.git
 [submodule "bundle/commentary"]
 	path = bundle/commentary
-	url = git@github.com:tpope/vim-commentary.git
+	url = https://github.com/tpope/vim-commentary.git
 [submodule "bundle/repeat"]
 	path = bundle/repeat
-	url = git@github.com:tpope/vim-repeat.git
+	url = https://github.com/tpope/vim-repeat.git
 [submodule "bundle/textobj-rubyblock"]
 	path = bundle/textobj-rubyblock
-	url = git@github.com:nelstrom/vim-textobj-rubyblock.git
+	url = https://github.com/nelstrom/vim-textobj-rubyblock.git
 [submodule "bundle/delimitMate"]
 	path = bundle/delimitMate
-	url = git@github.com:Raimondi/delimitMate.git
+	url = https://github.com/Raimondi/delimitMate.git
 [submodule "bundle/targets"]
 	path = bundle/targets
-	url = git://github.com/wellle/targets.vim.git
+	url = https://github.com/wellle/targets.vim.git
 [submodule "bundle/obvious-resize"]
 	path = bundle/obvious-resize
-	url = git@github.com:talek/obvious-resize.git
+	url = https://github.com/talek/obvious-resize.git
 [submodule "bundle/ack"]
 	path = bundle/ack
-	url = git@github.com:mileszs/ack.vim.git
+	url = https://github.com/mileszs/ack.vim.git
 [submodule "bundle/airline"]
 	path = bundle/airline
-	url = git@github.com:vim-airline/vim-airline.git
+	url = https://github.com/vim-airline/vim-airline.git
 [submodule "bundle/CamelCaseMotion"]
 	path = bundle/CamelCaseMotion
-	url = git@github.com:bkad/CamelCaseMotion.git
+	url = https://github.com/bkad/CamelCaseMotion.git
 [submodule "bundle/autotag"]
 	path = bundle/autotag
-	url = git@github.com:craigemery/vim-autotag.git
+	url = https://github.com/craigemery/vim-autotag.git
 [submodule "bundle/pasta"]
 	path = bundle/pasta
-	url = git@github.com:sickill/vim-pasta.git
+	url = https://github.com/sickill/vim-pasta.git
 [submodule "bundle/unimpaired"]
 	path = bundle/unimpaired
-	url = git@github.com:tpope/vim-unimpaired.git
+	url = https://github.com/tpope/vim-unimpaired.git
 [submodule "bundle/emmet"]
 	path = bundle/emmet
-	url = git@github.com:mattn/emmet-vim.git
-[submodule "polyglot"]
-	path = polyglot
-	url = git@github.com:sheerun/vim-polyglot.git
+	url = https://github.com/mattn/emmet-vim.git
 [submodule "bundle/polyglot"]
 	path = bundle/polyglot
-	url = git@github.com:sheerun/vim-polyglot.git
+	url = https://github.com/sheerun/vim-polyglot.git
 [submodule "bundle/fzf"]
 	path = bundle/fzf
-	url = git@github.com:junegunn/fzf.vim.git
+	url = https://github.com/junegunn/fzf.vim.git
 [submodule "bundle/abolish"]
 	path = bundle/abolish
-	url = git@github.com:tpope/vim-abolish.git
+	url = https://git@github.com/tpope/vim-abolish.git
 [submodule "bundle/rust"]
 	path = bundle/rust
 	url = https://github.com/rust-lang/rust.vim
