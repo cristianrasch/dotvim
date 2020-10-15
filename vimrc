@@ -1,4 +1,3 @@
-call pathogen#infect()                      " use pathogen
 " Helptags
 
 " Important general settings
@@ -237,7 +236,7 @@ map <F2> :Vex<CR>
 
 " Plugin configs
 
-call camelcasemotion#CreateMotionMappings(',')
+let g:camelcasemotion_key = ','
 
 if executable('rg')
   let g:ackprg = 'rg --vimgrep'
