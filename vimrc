@@ -80,7 +80,7 @@ set pastetoggle=<F3>
 
 " Highlight trailing whitespace
 match ErrorMsg '\s\+$'
-autocmd BufWritePre * :%s/\s\+$//e " removes trailing whitespace on save
+" autocmd BufWritePre * :%s/\s\+$//e " removes trailing whitespace on save
 
 " Editing shortcuts
 nnoremap Y y$
@@ -282,3 +282,8 @@ function! QuickfixFilenames()
   endfor
   return join(map(values(buffer_numbers), 'fnameescape(v:val)'))
 endfunction
+
+let g:ale_fixers = {
+\   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\}
+let g:ale_fix_on_save = 1
