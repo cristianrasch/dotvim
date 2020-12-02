@@ -288,3 +288,7 @@ let g:ale_fixers = {
 \}
 let g:ale_fix_on_save = 1
 let g:ale_linters_explicit = 1
+:nmap ]e :ALENextWrap<CR>
+:nmap [e :ALEPreviousWrap<CR>
+:nmap ]E :ALELast
+:nmap [E :ALEFirst
