@@ -283,11 +283,14 @@ function! QuickfixFilenames()
   return join(map(values(buffer_numbers), 'fnameescape(v:val)'))
 endfunction
 
-let g:ale_fixers = {
-\   '*': ['remove_trailing_lines', 'trim_whitespace'],
-\}
 let g:ale_fix_on_save = 1
 let g:ale_linters_explicit = 1
+let g:ale_fixers = {
+\   'javascript': ['prettier'],
+\   'css': ['prettier'],
+\   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\}
+let g:javascript_prettier_executable = 1
 :nmap ]e :ALENextWrap<CR>
 :nmap [e :ALEPreviousWrap<CR>
 :nmap ]E :ALELast
