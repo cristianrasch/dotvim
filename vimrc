@@ -80,7 +80,7 @@ set pastetoggle=<F3>
 
 " Highlight trailing whitespace
 match ErrorMsg '\s\+$'
-" autocmd BufWritePre * :%s/\s\+$//e " removes trailing whitespace on save
+autocmd BufWritePre * :%s/\s\+$//e " removes trailing whitespace on save
 
 " Editing shortcuts
 nnoremap Y y$
