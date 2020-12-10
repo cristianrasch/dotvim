@@ -283,7 +283,7 @@ function! QuickfixFilenames()
   return join(map(values(buffer_numbers), 'fnameescape(v:val)'))
 endfunction
 
-let g:ale_fix_on_save = 1
+let g:ale_fix_on_save = 0
 let g:ale_linters_explicit = 1
 let g:ale_fixers = {
 \   'javascript': ['prettier'],
@@ -295,3 +295,8 @@ let g:javascript_prettier_executable = 1
 :nmap [e :ALEPreviousWrap<CR>
 :nmap ]E :ALELast
 :nmap [E :ALEFirst
+
+" if getcwd() =~# '^\(/some/safe/path/\|/another/safe/path/\)'
+if getcwd() =~# '^\(/home/cristian/Documents/workspace/\)'
+  set secure exrc
+endif
