@@ -77,6 +77,9 @@ set colorcolumn=88                 " 88 column
 set synmaxcol=256                  " Don't highlight syntax pass this column
 set switchbuf=useopen
 set pastetoggle=<F3>
+" Open file under cursor in a new vertical split
+map <C-w>f <C-w>vgf
+map <C-w>F <C-w>vgF " GOTO selected line number
 
 " Highlight trailing whitespace
 match ErrorMsg '\s\+$'
