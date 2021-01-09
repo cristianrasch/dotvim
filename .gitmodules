@@ -60,4 +60,4 @@
 	url = https://github.com/rust-lang/rust.vim
 [submodule "pack/vendor/start/ale"]
 	path = pack/vendor/start/ale
-	url = git@github.com:dense-analysis/ale.git
+	url = https://github.com/dense-analysis/ale.git
