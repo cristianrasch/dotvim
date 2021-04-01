@@ -31,7 +31,9 @@ set noerrorbells
 set visualbell
 set lazyredraw                     " redraw only when we need to
 " set spell
-set spelllang=en_us,es_es
+set spelllang=en_us
+" set spelllang=en_us,es_es,de_de
+set mouse=
 
 " Indententation options
 filetype indent on
@@ -269,6 +271,9 @@ let g:user_emmet_settings = {
 \    'extends' : 'html',
 \  },
 \  'erb' : {
+\    'extends' : 'html',
+\  },
+\  'htmldjango' : {
 \    'extends' : 'html',
 \  },
 \}
