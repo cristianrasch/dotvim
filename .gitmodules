@@ -61,3 +61,6 @@
 [submodule "pack/vendor/start/ale"]
 	path = pack/vendor/start/ale
 	url = https://github.com/dense-analysis/ale.git
+[submodule "pack/vendor/start/vue"]
+	path = pack/vendor/start/vue
+	url = https://github.com/leafOfTree/vim-vue-plugin

@@ -309,3 +309,17 @@ let g:javascript_prettier_executable = 1
 if getcwd() =~# '^\(/home/cristian/Documents/workspace/\)'
   set secure exrc
 endif
+
+let g:vim_vue_plugin_config = {
+  \'syntax': {
+  \ 'template': ['html'],
+  \ 'script': ['javascript'],
+  \ 'style': ['css'],
+  \},
+  \'full_syntax': [],
+  \'attribute': 0,
+  \'keyword': 0,
+  \'foldexpr': 0,
+  \'init_indent': 0,
+  \'debug': 0,
+  \}
