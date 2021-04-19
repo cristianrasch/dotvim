@@ -282,6 +282,8 @@ let g:autotagCtagsCmd='ctags --recurse --languages=ruby,python .'
 let g:autotagStopAt='/home/cristian/Documents/workspace'
 
 " Copy the contents of the quickfix list to the args list
+" This gives you a command called :Qargs which copies the items from your quickfix list
+" into your args list
 command! -nargs=0 -bar Qargs execute 'args' QuickfixFilenames()
 function! QuickfixFilenames()
   let buffer_numbers = {}
