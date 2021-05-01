@@ -64,6 +64,3 @@
 [submodule "pack/vendor/start/vue"]
 	path = pack/vendor/start/vue
 	url = https://github.com/leafOfTree/vim-vue-plugin
-[submodule "pack/vendor/start/eunuch"]
-	path = pack/vendor/start/eunuch
-	url = https://tpope.io/vim/eunuch.git
