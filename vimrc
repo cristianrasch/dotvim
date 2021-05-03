@@ -144,6 +144,8 @@ set modeline                      " Allow modelines
 
 " Filetype mappings
 autocmd BufRead,BufNewFile *.md setfiletype markdown
+autocmd BufNewFile *.sh 0r ~/skeletons/bash.sh
+" autocmd BufNewFile readme.md 0r ~/skeletons/readme.md
 
 " Navigation options
 let s:default_path = escape(&path, '\ ') " store default value of 'path'
