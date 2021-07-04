@@ -75,7 +75,7 @@ set list
 set listchars=nbsp:·,tab:▸\ ,eol:¬ " Invisible characters, à la TextMate
 set wrap
 set textwidth=87                   " Text wrapping
-set colorcolumn=88                 " 88 column
+set colorcolumn=120                " 120 column
 set synmaxcol=256                  " Don't highlight syntax pass this column
 set switchbuf=useopen
 set pastetoggle=<F3>
@@ -131,8 +131,8 @@ map <leader>* :Ack <cword><CR>
 set grepprg=rg\ --vimgrep\ --smart-case\ --follow
 set magic                         " For regular expressions turn magic on
 " Turn on vim's very magic mode
-nnoremap / /\v
-vnoremap / /\v
+" nnoremap / /\v
+" vnoremap / /\v
 " Make . work w/ visually selected lines
 vnoremap . :normal.<CR>
 
