@@ -74,8 +74,8 @@ set nrformats+=alpha               " Ctrl-X/Ctrl-A can increment letters too
 set list
 set listchars=nbsp:·,tab:▸\ ,eol:¬ " Invisible characters, à la TextMate
 set wrap
-set textwidth=119                  " Text wrapping
-set colorcolumn=120                " 120 column
+set textwidth=88                   " Text wrapping
+set colorcolumn=89                 " 89 column
 set synmaxcol=256                  " Don't highlight syntax pass this column
 set switchbuf=useopen
 set pastetoggle=<F3>
