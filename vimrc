@@ -82,6 +82,8 @@ set pastetoggle=<F3>
 " Open file under cursor in a new vertical split
 map <C-w>f <C-w>vgf
 map <C-w>F <C-w>vgF " GOTO selected line number
+" reselect pasted text
+nnoremap gp `[v`]
 
 " Highlight trailing whitespace
 match ErrorMsg '\s\+$'
