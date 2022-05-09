@@ -299,6 +299,10 @@ function! QuickfixFilenames()
   return join(map(values(buffer_numbers), 'fnameescape(v:val)'))
 endfunction
 
+" Updates your current buffer (saves it). Then it closes all open buffers, then it
+" reopens the last buffer
+command Bd :up | %bd | e#
+
 let g:ale_use_global_executables = 1
 let g:ale_fix_on_save = 0
 let g:ale_linters_explicit = 1
