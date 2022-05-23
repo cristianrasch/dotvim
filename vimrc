@@ -96,6 +96,12 @@ map <leader>ew :e <C-R>=expand("%:p:h") . "/" <CR>
 map <leader>es :sp <C-R>=expand("%:p:h") . "/" <CR>
 map <leader>ev :vsp <C-R>=expand("%:p:h") . "/" <CR>
 map <leader>et :tabe <C-R>=expand("%:p:h") . "/" <CR>
+" copy the current file path into your system clipboard
+map <leader>ap :let @+=expand("%:p")<CR> " absolute path
+map <leader>rp :let @+=expand("%")<CR> " relative path
+map <leader>dn :let @+=expand("%:p:h")<CR> " directory name
+map <leader>fn :let @+=expand("%:t")<CR> " file name
+map <leader>ln :let @+=fnamemodify(expand("%"), ":~:.") . ":" . line(".")<CR>
 cnoremap w!! execute 'silent! write !sudo tee % >/dev/null' <bar> edit!
 " Split edit your vimrc. Type space, v, r in sequence to trigger
 nmap <leader>vr :tabe $MYVIMRC<cr>
