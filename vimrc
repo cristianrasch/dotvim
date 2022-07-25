@@ -154,6 +154,7 @@ set modeline                      " Allow modelines
 autocmd BufRead,BufNewFile *.md setfiletype markdown
 autocmd BufNewFile *.sh 0r ~/skeletons/bash.sh
 " autocmd BufNewFile readme.md 0r ~/skeletons/readme.md
+autocmd FileType html,eruby,htmldjango set omnifunc=htmlcomplete#CompleteTags
 
 let g:markdown_fenced_languages = ['html', 'python', 'ruby', 'javascript', 'vim']
 
