@@ -263,8 +263,6 @@ if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif
 
-let g:rustfmt_autosave = 1
-
 let g:netrw_liststyle = 3
 let g:netrw_banner = 0
 " 1 = horiz split, 2 vert split, 3 new tab, 4 prev win
@@ -316,7 +314,8 @@ let g:ale_linters_explicit = 1
 let g:ale_fixers = {
 \   'javascript': ['prettier'],
 \   'css': ['prettier'],
-\   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\   'rust': ['rustfmt'],
+\   '*': ['trim_whitespace', 'remove_trailing_lines'],
 \}
 let g:javascript_prettier_executable = 1
 :nmap ]e :ALENextWrap<CR>
