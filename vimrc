@@ -341,3 +341,5 @@ let g:vim_vue_plugin_config = {
   \'init_indent': 0,
   \'debug': 0,
   \}
+
+let g:rustfmt_autosave = 1
