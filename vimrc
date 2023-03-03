@@ -289,7 +289,10 @@ let g:user_emmet_settings = {
 \  },
 \}
 
-let g:autotagCtagsCmd='ctags --recurse --languages=ruby,python .'
+:set tags=.tags
+let g:autotagTagsFile=".tags"
+let g:autotagCtagsCmd='ctags -f .tags --languages=ruby,python .'
+" let g:autotagCtagsCmd='ctags --recurse --languages=ruby,python .'
 let g:autotagStopAt='/home/cristian/Documents/workspace'
 
 " Copy the contents of the quickfix list to the args list
