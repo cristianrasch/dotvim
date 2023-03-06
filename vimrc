@@ -346,3 +346,21 @@ let g:vim_vue_plugin_config = {
   \}
 
 let g:rustfmt_autosave = 1
+
+let g:ycm_python_interpreter_path = ''
+let g:ycm_extra_conf_vim_data = [
+  \  'g:ycm_python_interpreter_path'
+  \]
+let g:ycm_global_ycm_extra_conf = '~/.vim/global_extra_conf.py'
+let g:ycm_always_populate_location_list = 1
+" If you prefer the detailed diagnostic to always be shown in a popup
+" let g:ycm_show_detailed_diag_in_popup = 1
+nmap <leader>yfsw <Plug>(YCMFindSymbolInWorkspace)
+nmap <leader>yfsd <Plug>(YCMFindSymbolInDocument)
+nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>
+" perform the "most sensible" GoTo operation it can
+nnoremap <leader>yd :YcmCompleter GoTo<CR>
+" nnoremap <leader>yD :YcmCompleter GoToDeclaration<CR>
+" nnoremap <leader>yD :YcmCompleter GoToDefinition<CR>
+nnoremap <leader>ygr :YcmCompleter GoToReferences<CR>
+nnoremap <leader>ygd :YcmCompleter GetDoc<CR>

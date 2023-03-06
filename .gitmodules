@@ -70,3 +70,6 @@
 [submodule "pack/vendor/start/editorconfig"]
 	path = pack/vendor/start/editorconfig
 	url = https://github.com/editorconfig/editorconfig-vim.git
+[submodule "pack/vendor/start/YouCompleteMe"]
+	path = pack/vendor/start/YouCompleteMe
+	url = https://github.com/ycm-core/YouCompleteMe.git
