@@ -356,13 +356,13 @@ let g:ycm_always_populate_location_list = 1
 " If you prefer the detailed diagnostic to always be shown in a popup
 " let g:ycm_show_detailed_diag_in_popup = 1
 let g:ycm_auto_hover = ''
-nmap <leader>D <plug>(YCMHover)
-nmap <leader>yfsw <Plug>(YCMFindSymbolInWorkspace)
-nmap <leader>yfsd <Plug>(YCMFindSymbolInDocument)
+nmap <leader>D <Plug>(YCMHover)
+nmap <leader>ysw <Plug>(YCMFindSymbolInWorkspace)
+nmap <leader>ysd <Plug>(YCMFindSymbolInDocument)
 nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>
 " perform the "most sensible" GoTo operation it can
 nnoremap <leader>yd :YcmCompleter GoTo<CR>
-" nnoremap <leader>yD :YcmCompleter GoToDeclaration<CR>
-" nnoremap <leader>yD :YcmCompleter GoToDefinition<CR>
-nnoremap <leader>ygr :YcmCompleter GoToReferences<CR>
-nnoremap <leader>ygd :YcmCompleter GetDoc<CR>
+" nnoremap <leader>ydc :YcmCompleter GoToDeclaration<CR>
+" nnoremap <leader>ydf :YcmCompleter GoToDefinition<CR>
+nnoremap <leader>yr :YcmCompleter GoToReferences<CR>
+nnoremap <leader>yD :YcmCompleter GetDoc<CR>
