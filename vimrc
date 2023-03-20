@@ -79,11 +79,6 @@ set colorcolumn=89                 " 89 column
 set synmaxcol=256                  " Don't highlight syntax pass this column
 set switchbuf=useopen
 set pastetoggle=<F3>
-" Open file under cursor in a new vertical split
-map <C-w>f <C-w>vgf
-map <C-w>F <C-w>vgF " GOTO selected line number
-" reselect pasted text
-nnoremap gp `[v`]
 
 " Highlight trailing whitespace
 match ErrorMsg '\s\+$'
@@ -103,11 +98,11 @@ map <leader>dn :let @+=expand("%:p:h")<CR> " directory name
 map <leader>fn :let @+=expand("%:t")<CR> " file name
 map <leader>ln :let @+=fnamemodify(expand("%"), ":~:.") . ":" . line(".")<CR>
 cnoremap w!! execute 'silent! write !sudo tee % >/dev/null' <bar> edit!
+" cmap w!! w !sudo tee > /dev/null % " sudo write
 " Split edit your vimrc. Type space, v, r in sequence to trigger
-nmap <leader>vr :tabe $MYVIMRC<cr>
+nmap <leader>vr :vsp $MYVIMRC<cr>
 " Source (reload) your vimrc. Type space, s, o in sequence to trigger
 nmap <leader>so :source $MYVIMRC<cr>
-" cmap w!! w !sudo tee > /dev/null % " sudo write
 " shortcuts for 3-way merge
 map <Leader>1 :diffget LOCAL<CR>
 map <Leader>2 :diffget BASE<CR>
@@ -117,6 +112,12 @@ map <leader>D :put =strftime('# %a %Y-%m-%d %H:%M:%S%z')<CR>
 if has("patch-8.1.0360")
   set diffopt+=internal,algorithm:patience
 endif
+" Open file under cursor in a new vertical split
+map <C-w>f <C-w>vgf
+map <C-w>F <C-w>vgF " GOTO selected line number
+
+" reselect pasted text
+nnoremap gp `[v`]
 
 " Search options
 set incsearch
@@ -185,7 +186,7 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
-nnoremap <leader>w <C-W>w
+" nnoremap <leader>w <C-W>w
 nnoremap <silent> <leader>s :split<CR>
 nnoremap <silent> <leader>v :vsplit<CR>
 nnoremap <silent> <leader>q :close<CR>
@@ -356,12 +357,12 @@ let g:ycm_always_populate_location_list = 1
 " If you prefer the detailed diagnostic to always be shown in a popup
 " let g:ycm_show_detailed_diag_in_popup = 1
 let g:ycm_auto_hover = ''
-nmap <leader>D <Plug>(YCMHover)
-nmap <leader>ysw <Plug>(YCMFindSymbolInWorkspace)
-nmap <leader>ysd <Plug>(YCMFindSymbolInDocument)
+nmap <leader>h <Plug>(YCMHover)
+nmap <leader>fsw <Plug>(YCMFindSymbolInWorkspace)
+nmap <leader>fsd <Plug>(YCMFindSymbolInDocument)
 nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>
 " perform the "most sensible" GoTo operation it can
-nnoremap <leader>yd :YcmCompleter GoTo<CR>
+nnoremap <leader>gd :YcmCompleter GoTo<CR>
 " nnoremap <leader>ydc :YcmCompleter GoToDeclaration<CR>
 " nnoremap <leader>ydf :YcmCompleter GoToDefinition<CR>
 nnoremap <leader>yr :YcmCompleter GoToReferences<CR>
