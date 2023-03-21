@@ -127,6 +127,7 @@ set smartcase                     " don't ignore capitals in searches
 set gdefault
 " turn off search highlight
 nnoremap <leader><space> :nohlsearch<CR>
+
 " open ack.vim
 nnoremap <leader>a :Ack<space>
 nnoremap <leader>l :LAck<space>
@@ -169,7 +170,7 @@ autocmd BufRead *.rb,*.rake,*.js,*.py
       \ exec "set path-=".s:default_path |
       \ exec "set path^=".s:tempPath |
       \ exec "set path^=".s:default_path
-set suffixesadd+=.rb,.js,.py
+set suffixesadd+=.rb,.py,.js
 
 " Navigation mappings
 " Move vertically by visual line
@@ -189,7 +190,7 @@ nnoremap <C-H> <C-W><C-H>
 " nnoremap <leader>w <C-W>w
 nnoremap <silent> <leader>s :split<CR>
 nnoremap <silent> <leader>v :vsplit<CR>
-nnoremap <silent> <leader>q :close<CR>
+nnoremap <silent> <leader>x :close<CR>
 noremap <silent> <leader>z :tab split<CR>
 
 " Buffer navigation
@@ -227,7 +228,7 @@ colorscheme gruvbox
 " GUI options
 if has('gui_running')
   set lines=40 columns=99
-  set guifont=Monospace\ 12
+  set guifont=JetBrains\ Mono\ 10
   set guioptions-=m           "remove menu bar
   set guioptions-=T           "remove toolbar
   set guioptions-=r           "remove right-hand scroll bar
@@ -273,8 +274,6 @@ let g:netrw_winsize = 20
 let g:netrw_list_hide = '\(^\|\s\s\)\zs\.\S\+,\(^\|\s\s\)ntuser\.\S\+'
 let g:netrw_hide = 1
 let g:netrw_dirhistmax = 0
-
-let g:pasta_disabled_filetypes = ['python', 'coffee', 'yaml']
 
 let g:user_emmet_install_global = 0
 autocmd FileType html,css,eruby EmmetInstall
