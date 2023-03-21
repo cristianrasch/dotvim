@@ -156,9 +156,9 @@ set modeline                      " Allow modelines
 autocmd BufRead,BufNewFile *.md setfiletype markdown
 autocmd BufNewFile *.sh 0r ~/.vim/skeletons/bash.sh
 " autocmd BufNewFile readme.md 0r ~/skeletons/readme.md
-autocmd FileType html,eruby,htmldjango set omnifunc=htmlcomplete#CompleteTags
+autocmd FileType html,eruby,htmldjango,vue set omnifunc=htmlcomplete#CompleteTags
 
-let g:markdown_fenced_languages = ['html', 'python', 'ruby', 'javascript', 'vim']
+let g:markdown_fenced_languages = ['html', 'python', 'ruby', 'javascript']
 
 " Navigation options
 let s:default_path = escape(&path, '\ ') " store default value of 'path'
@@ -285,6 +285,9 @@ let g:user_emmet_settings = {
 \    'extends' : 'html',
 \  },
 \  'htmldjango' : {
+\    'extends' : 'html',
+\  },
+\  'vue' : {
 \    'extends' : 'html',
 \  },
 \}
