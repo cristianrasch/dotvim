@@ -138,7 +138,8 @@ nmap <Leader>b :Buffers<CR>
 nmap <Leader>t :Tags<CR>
 nmap <Leader>/ :Rg<Space>
 map <leader>* :Ack <cword><CR>
-set grepprg=rg\ --vimgrep\ --smart-case\ --follow
+set grepprg=rg\ --vimgrep\ --smart-case\ --hidden\ --follow
+let g:rg_derive_root='true'
 set magic                         " For regular expressions turn magic on
 " Turn on vim's very magic mode
 " nnoremap / /\v
