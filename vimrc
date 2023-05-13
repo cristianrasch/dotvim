@@ -323,10 +323,9 @@ let g:ale_linters_explicit = 1
 let g:ale_fixers = {
 \   'javascript': ['prettier'],
 \   'css': ['prettier'],
-\   'rust': ['rustfmt'],
 \   '*': ['trim_whitespace', 'remove_trailing_lines'],
 \}
-let g:ale_disable_lsp = 1
+" let g:ale_disable_lsp = 1
 let g:javascript_prettier_executable = 1
 :nmap ]e :ALENextWrap<CR>
 :nmap [e :ALEPreviousWrap<CR>
@@ -352,7 +351,14 @@ let g:vim_vue_plugin_config = {
   \'debug': 0,
   \}
 
-let g:rustfmt_autosave = 1
+" As-you-type autocomplete
+set completeopt=menu,menuone,preview,noselect,noinsert
+" so that Vim's popup menu doesn't select the first completion item,
+" but rather just inserts the longest common text of all matches;
+" and the menu will come up even if there's only one match
+" set completeopt=longest,menuone
+
+" let g:rustfmt_autosave = 1
 
 " let g:ycm_python_interpreter_path = ''
 " let g:ycm_extra_conf_vim_data = [
