@@ -64,12 +64,6 @@
 [submodule "pack/vendor/start/vue"]
 	path = pack/vendor/start/vue
 	url = https://github.com/leafOfTree/vim-vue-plugin
-[submodule "pack/vendor/start/go"]
-	path = pack/vendor/start/go
-	url = https://github.com/fatih/vim-go.git
 [submodule "pack/vendor/start/editorconfig"]
 	path = pack/vendor/start/editorconfig
 	url = https://github.com/editorconfig/editorconfig-vim.git
-[submodule "pack/vendor/start/YouCompleteMe"]
-	path = pack/vendor/start/YouCompleteMe
-	url = https://github.com/ycm-core/YouCompleteMe.git

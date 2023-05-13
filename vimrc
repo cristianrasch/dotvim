@@ -353,22 +353,22 @@ let g:vim_vue_plugin_config = {
 
 let g:rustfmt_autosave = 1
 
-let g:ycm_python_interpreter_path = ''
-let g:ycm_extra_conf_vim_data = [
-  \  'g:ycm_python_interpreter_path'
-  \]
-let g:ycm_global_ycm_extra_conf = '~/.vim/global_extra_conf.py'
-let g:ycm_always_populate_location_list = 1
-" If you prefer the detailed diagnostic to always be shown in a popup
-" let g:ycm_show_detailed_diag_in_popup = 1
-let g:ycm_auto_hover = ''
-nmap <leader>h <Plug>(YCMHover)
-nmap <leader>fsw <Plug>(YCMFindSymbolInWorkspace)
-nmap <leader>fsd <Plug>(YCMFindSymbolInDocument)
-nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>
-" perform the "most sensible" GoTo operation it can
-nnoremap <leader>gd :YcmCompleter GoTo<CR>
-" nnoremap <leader>ydc :YcmCompleter GoToDeclaration<CR>
-" nnoremap <leader>ydf :YcmCompleter GoToDefinition<CR>
-nnoremap <leader>yr :YcmCompleter GoToReferences<CR>
-nnoremap <leader>yD :YcmCompleter GetDoc<CR>
+" let g:ycm_python_interpreter_path = ''
+" let g:ycm_extra_conf_vim_data = [
+"   \  'g:ycm_python_interpreter_path'
+"   \]
+" let g:ycm_global_ycm_extra_conf = '~/.vim/global_extra_conf.py'
+" let g:ycm_always_populate_location_list = 1
+" " If you prefer the detailed diagnostic to always be shown in a popup
+" " let g:ycm_show_detailed_diag_in_popup = 1
+" let g:ycm_auto_hover = ''
+" nmap <leader>h <Plug>(YCMHover)
+" nmap <leader>fsw <Plug>(YCMFindSymbolInWorkspace)
+" nmap <leader>fsd <Plug>(YCMFindSymbolInDocument)
+" nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>
+" " perform the "most sensible" GoTo operation it can
+" nnoremap <leader>gd :YcmCompleter GoTo<CR>
+" " nnoremap <leader>ydc :YcmCompleter GoToDeclaration<CR>
+" " nnoremap <leader>ydf :YcmCompleter GoToDefinition<CR>
+" nnoremap <leader>yr :YcmCompleter GoToReferences<CR>
+" nnoremap <leader>yD :YcmCompleter GetDoc<CR>
