@@ -64,3 +64,6 @@
 [submodule "pack/vendor/start/editorconfig"]
 	path = pack/vendor/start/editorconfig
 	url = https://github.com/editorconfig/editorconfig-vim.git
+[submodule "pack/vendor/start/coc"]
+	path = pack/vendor/start/coc
+	url = https://github.com/neoclide/coc.nvim.git
