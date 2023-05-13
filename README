@@ -9,31 +9,35 @@ mkdir -p ~/.Vim/{swap,backup}
 
 # Third-party dependencies:
 
+# Debian
 sudo apt-get install -y ripgrep exuberant-ctags
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
+# Fedora
+sudo dnf install -y ripgrep ctags fzf
 ```
 
 Add a new plugin:
 =================
 
 ```bash
-git submodule add http://github.com/tpope/vim-fugitive.git bundle/fugitive
+cd ~/.vim
+git submodule add https://github.com/tpope/vim-fugitive.git pack/vendor/start/fugitive
 ```
 
 Delete an existing plugin
 =========================
 
 ```bash
-cd ~/.vim/bundle
-git submodule deinit matchit
-git rm matchit
+cd ~/.vim
+git submodule deinit pack/vendor/start/fugitive
+git rm pack/vendor/start/fugitive
 ```
 
 Upgrade all bundled plugins:
 ============================
 
 ```bash
-cd ~/.vim
+for i in ~/.vim/pack/vendor/start/*; do git -C $i pull origin master; done
 git submodule foreach git pull origin master
 ```
