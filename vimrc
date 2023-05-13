@@ -326,6 +326,7 @@ let g:ale_fixers = {
 \   'rust': ['rustfmt'],
 \   '*': ['trim_whitespace', 'remove_trailing_lines'],
 \}
+let g:ale_disable_lsp = 1
 let g:javascript_prettier_executable = 1
 :nmap ]e :ALENextWrap<CR>
 :nmap [e :ALEPreviousWrap<CR>
