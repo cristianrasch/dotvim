@@ -138,7 +138,7 @@ nmap <Leader>b :Buffers<CR>
 nmap <Leader>t :Tags<CR>
 nmap <Leader>/ :Rg<Space>
 map <leader>* :Ack <cword><CR>
-set grepprg=rg\ --vimgrep\ --smart-case\ --hidden\ --follow
+" set grepprg=rg\ --vimgrep\ --smart-case\ --hidden\ --follow
 let g:rg_derive_root='true'
 set magic                         " For regular expressions turn magic on
 " Turn on vim's very magic mode
@@ -262,10 +262,7 @@ map <F2> :Vex<CR>
 let g:camelcasemotion_key = ','
 
 if executable('rg')
-  let g:ackprg = 'rg --vimgrep'
-endif
-if executable('ag')
-  let g:ackprg = 'ag --vimgrep'
+  let g:ackprg = 'rg --vimgrep --smart-case --hidden --follow'
 endif
 
 let g:netrw_liststyle = 3
@@ -325,7 +322,6 @@ let g:ale_fixers = {
 \   'css': ['prettier'],
 \   '*': ['trim_whitespace', 'remove_trailing_lines'],
 \}
-" let g:ale_disable_lsp = 1
 let g:javascript_prettier_executable = 1
 :nmap ]e :ALENextWrap<CR>
 :nmap [e :ALEPreviousWrap<CR>
