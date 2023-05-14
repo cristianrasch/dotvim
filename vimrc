@@ -138,8 +138,8 @@ nmap <Leader>b :Buffers<CR>
 nmap <Leader>t :Tags<CR>
 nmap <Leader>/ :Rg<Space>
 map <leader>* :Ack <cword><CR>
-" set grepprg=rg\ --vimgrep\ --smart-case\ --hidden\ --follow
-let g:rg_derive_root='true'
+" Any empty ack search will search for the work the cursor is on
+let g:ack_use_cword_for_empty_search = 1
 set magic                         " For regular expressions turn magic on
 " Turn on vim's very magic mode
 " nnoremap / /\v
@@ -262,7 +262,9 @@ map <F2> :Vex<CR>
 let g:camelcasemotion_key = ','
 
 if executable('rg')
-  let g:ackprg = 'rg --vimgrep --smart-case --hidden --follow'
+  set grepprg=rg\ --vimgrep\ --smart-case\ --no-heading
+  set grepformat=%f:%l:%c:%m
+  let g:ackprg = 'rg --vimgrep --smart-case --no-heading'
 endif
 
 let g:netrw_liststyle = 3
