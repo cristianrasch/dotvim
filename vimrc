@@ -59,11 +59,7 @@ set nobackup
 " use rename-and-write-new method whenever safe
 set backupcopy=auto
 " patch required to honor double slash at end
-if has("patch-8.1.0251")
-  " consolidate the writebackups -- not a big
-  " deal either way, since they usually get deleted
-  set backupdir^=~/.Vim/backup//
-end
+set backupdir^=~/.Vim/backup//
 set noundofile
 set backspace=indent,eol,start
 set history=200
@@ -74,8 +70,8 @@ set nrformats+=alpha               " Ctrl-X/Ctrl-A can increment letters too
 set list
 set listchars=nbsp:·,tab:▸\ ,eol:¬ " Invisible characters, à la TextMate
 set wrap
-set textwidth=88                   " Text wrapping
-set colorcolumn=89                 " 89 column
+set textwidth=100                   " Text wrapping
+set colorcolumn=101
 set synmaxcol=256                  " Don't highlight syntax pass this column
 set switchbuf=useopen
 set pastetoggle=<F3>
@@ -91,7 +87,7 @@ map <leader>ew :e <C-R>=expand("%:p:h") . "/" <CR>
 map <leader>es :sp <C-R>=expand("%:p:h") . "/" <CR>
 map <leader>ev :vsp <C-R>=expand("%:p:h") . "/" <CR>
 map <leader>et :tabe <C-R>=expand("%:p:h") . "/" <CR>
-" copy the current file path into your system clipboard
+" copy the path to the current file path into your system clipboard
 map <leader>ap :let @+=expand("%:p")<CR> " absolute path
 map <leader>rp :let @+=expand("%")<CR> " relative path
 map <leader>dn :let @+=expand("%:p:h")<CR> " directory name
@@ -109,9 +105,7 @@ map <Leader>2 :diffget BASE<CR>
 map <Leader>3 :diffget REMOTE<CR>
 map <Leader>w :w<CR>
 map <leader>D :put =strftime('# %a %Y-%m-%d %H:%M:%S%z')<CR>
-if has("patch-8.1.0360")
-  set diffopt+=internal,algorithm:patience
-endif
+set diffopt+=internal,algorithm:patience
 " Open file under cursor in a new vertical split
 map <C-w>f <C-w>vgf
 map <C-w>F <C-w>vgF " GOTO selected line number
@@ -159,9 +153,9 @@ autocmd BufNewFile *.sh 0r ~/.vim/skeletons/bash.sh
 " autocmd BufNewFile readme.md 0r ~/skeletons/readme.md
 autocmd FileType html,eruby,htmldjango,vue set omnifunc=htmlcomplete#CompleteTags
 " More abbreviation examples: https://jovica.org/posts/vim_abbreviations/
-autocmd Filetype python :iabbrev ippp from pprint import pprint<CR>import sys
+autocmd Filetype python :iabbrev ippp from pprint import pprint<CR>import sys<CR>print("===", file=sys.stderr)
 
-let g:markdown_fenced_languages = ['html', 'python', 'ruby', 'javascript']
+let g:markdown_fenced_languages = ['html', 'javascript', 'ruby', 'python', 'rust']
 
 " Navigation options
 let s:default_path = escape(&path, '\ ') " store default value of 'path'
@@ -173,7 +167,7 @@ autocmd BufRead *.rb,*.rake,*.js,*.py
       \ exec "set path-=".s:default_path |
       \ exec "set path^=".s:tempPath |
       \ exec "set path^=".s:default_path
-set suffixesadd+=.rb,.py,.js
+set suffixesadd+=.rb,.py,.js,.rs
 
 " Navigation mappings
 " Move vertically by visual line
@@ -190,7 +184,7 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
-" nnoremap <leader>w <C-W>w
+" nnoremap <leader>w <C-W>w " already mapped to save buffer contents
 nnoremap <silent> <leader>s :split<CR>
 nnoremap <silent> <leader>v :vsplit<CR>
 nnoremap <silent> <leader>x :close<CR>
@@ -201,8 +195,8 @@ nnoremap <leader>q :bd! <enter>
 
 " Tab navigation
 nnoremap th  :tabfirst<CR>
-nnoremap tj  :tabnext<CR>
-nnoremap tk  :tabprev<CR>
+nnoremap tk  :tabnext<CR>
+nnoremap tj  :tabprev<CR>
 nnoremap tl  :tablast<CR>
 nnoremap tt  :tabedit<Space>
 nnoremap tn  :tabnew<CR>
@@ -229,14 +223,14 @@ colorscheme gruvbox
 " set t_Co=256
 
 " GUI options
-if has('gui_running')
-  set lines=40 columns=99
-  set guifont=JetBrains\ Mono\ 10
-  set guioptions-=m           "remove menu bar
-  set guioptions-=T           "remove toolbar
-  set guioptions-=r           "remove right-hand scroll bar
-  set guioptions-=L           "remove left-hand scroll bar
-endif
+" if has('gui_running')
+"   set lines=40 columns=99
+"   set guifont=JetBrains\ Mono\ 10
+"   set guioptions-=m           "remove menu bar
+"   set guioptions-=T           "remove toolbar
+"   set guioptions-=r           "remove right-hand scroll bar
+"   set guioptions-=L           "remove left-hand scroll bar
+" endif
 
 set background=dark
 " if hostname() == "laptop"
@@ -278,7 +272,7 @@ let g:netrw_hide = 1
 let g:netrw_dirhistmax = 0
 
 let g:user_emmet_install_global = 0
-autocmd FileType html,css,eruby EmmetInstall
+autocmd FileType html,css,eruby,htmldjango,vue EmmetInstall
 let g:user_emmet_settings = {
 \  'xml' : {
 \    'extends' : 'html',
@@ -303,14 +297,14 @@ let g:autotagStopAt='/home/cristian/Documents/workspace'
 " Copy the contents of the quickfix list to the args list
 " This gives you a command called :Qargs which copies the items from your quickfix list
 " into your args list
-command! -nargs=0 -bar Qargs execute 'args' QuickfixFilenames()
-function! QuickfixFilenames()
-  let buffer_numbers = {}
-  for quickfix_item in getqflist()
-    let buffer_numbers[quickfix_item['bufnr']] = bufname(quickfix_item['bufnr'])
-  endfor
-  return join(map(values(buffer_numbers), 'fnameescape(v:val)'))
-endfunction
+" command! -nargs=0 -bar Qargs execute 'args' QuickfixFilenames()
+" function! QuickfixFilenames()
+"   let buffer_numbers = {}
+"   for quickfix_item in getqflist()
+"     let buffer_numbers[quickfix_item['bufnr']] = bufname(quickfix_item['bufnr'])
+"   endfor
+"   return join(map(values(buffer_numbers), 'fnameescape(v:val)'))
+" endfunction
 
 " Updates your current buffer (saves it). Then it closes all open buffers, then it
 " reopens the last buffer
@@ -359,23 +353,3 @@ set completeopt=menu,menuone,preview,noselect,noinsert
 " set completeopt=longest,menuone
 
 " let g:rustfmt_autosave = 1
-
-" let g:ycm_python_interpreter_path = ''
-" let g:ycm_extra_conf_vim_data = [
-"   \  'g:ycm_python_interpreter_path'
-"   \]
-" let g:ycm_global_ycm_extra_conf = '~/.vim/global_extra_conf.py'
-" let g:ycm_always_populate_location_list = 1
-" " If you prefer the detailed diagnostic to always be shown in a popup
-" " let g:ycm_show_detailed_diag_in_popup = 1
-" let g:ycm_auto_hover = ''
-" nmap <leader>h <Plug>(YCMHover)
-" nmap <leader>fsw <Plug>(YCMFindSymbolInWorkspace)
-" nmap <leader>fsd <Plug>(YCMFindSymbolInDocument)
-" nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>
-" " perform the "most sensible" GoTo operation it can
-" nnoremap <leader>gd :YcmCompleter GoTo<CR>
-" " nnoremap <leader>ydc :YcmCompleter GoToDeclaration<CR>
-" " nnoremap <leader>ydf :YcmCompleter GoToDefinition<CR>
-" nnoremap <leader>yr :YcmCompleter GoToReferences<CR>
-" nnoremap <leader>yD :YcmCompleter GetDoc<CR>
