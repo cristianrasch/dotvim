@@ -223,14 +223,14 @@ colorscheme gruvbox
 " set t_Co=256
 
 " GUI options
-" if has('gui_running')
-"   set lines=40 columns=99
-"   set guifont=JetBrains\ Mono\ 10
-"   set guioptions-=m           "remove menu bar
-"   set guioptions-=T           "remove toolbar
-"   set guioptions-=r           "remove right-hand scroll bar
-"   set guioptions-=L           "remove left-hand scroll bar
-" endif
+if has('gui_running')
+  " set lines=40 columns=99
+  set guifont=JetBrains\ Mono\ 10
+  set guioptions-=m           "remove menu bar
+  set guioptions-=T           "remove toolbar
+  set guioptions-=r           "remove right-hand scroll bar
+  set guioptions-=L           "remove left-hand scroll bar
+endif
 
 set background=dark
 " if hostname() == "laptop"
