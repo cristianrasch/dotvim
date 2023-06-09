@@ -109,6 +109,8 @@ set diffopt+=internal,algorithm:patience
 " Open file under cursor in a new vertical split
 map <C-w>f <C-w>vgf
 map <C-w>F <C-w>vgF " GOTO selected line number
+" open the file with your favorite application in the background (don't hold the editor back)
+nnoremap gX :silent :execute "!xdg-open" expand('%:p:h') . "/" . expand("<cfile>") " &"<cr>
 
 " reselect pasted text
 nnoremap gp `[v`]
