@@ -312,17 +312,18 @@ let g:autotagStopAt='/home/cristian/Documents/workspace'
 " reopens the last buffer
 command Bd :up | %bd | e#
 
-" let g:ale_set_quickfix = 0
 let g:ale_set_loclist = 0
+" let g:ale_set_quickfix = 0
 let g:ale_use_global_executables = 1
-let g:ale_fix_on_save = 1
 let g:ale_linters_explicit = 1
+let g:ale_fix_on_save = 1
 let g:ale_fixers = {
 \   'javascript': ['prettier'],
 \   'css': ['prettier'],
 \   '*': ['trim_whitespace', 'remove_trailing_lines'],
 \}
 let g:javascript_prettier_executable = 1
+let g:ale_rust_cargo_use_clippy = executable('cargo-clippy')
 :nmap ]e :ALENextWrap<CR>
 :nmap [e :ALEPreviousWrap<CR>
 :nmap ]E :ALELast
@@ -353,5 +354,3 @@ set completeopt=menu,menuone,preview,noselect,noinsert
 " but rather just inserts the longest common text of all matches;
 " and the menu will come up even if there's only one match
 " set completeopt=longest,menuone
-
-" let g:rustfmt_autosave = 1
