@@ -17,6 +17,11 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 sudo dnf install -y ripgrep ctags fzf
 ```
 
+Language servers:
+=================
+
+:CocInstall coc-jedi
+
 Add a new plugin:
 =================
 
