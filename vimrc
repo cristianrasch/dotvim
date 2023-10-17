@@ -318,16 +318,48 @@ let g:ale_use_global_executables = 1
 let g:ale_linters_explicit = 1
 let g:ale_fix_on_save = 1
 let g:ale_fixers = {
-\   'javascript': ['prettier'],
-\   'css': ['prettier'],
 \   '*': ['trim_whitespace', 'remove_trailing_lines'],
 \}
-let g:javascript_prettier_executable = 1
-let g:ale_rust_cargo_use_clippy = executable('cargo-clippy')
+" let g:ale_rust_cargo_use_clippy = executable('cargo-clippy')
 :nmap ]e :ALENextWrap<CR>
 :nmap [e :ALEPreviousWrap<CR>
 :nmap ]E :ALELast
 :nmap [E :ALEFirst
+
+let g:lsp_diagnostics_enabled = 0
+let g:lsp_settings_filetype_python = ['jedi-language-server']
+" let g:lsp_settings_filetype_python = ['jedi-language-server', 'ruff-lsp']
+let g:lsp_settings_filetype_ruby = ['ruby-lsp']
+let g:lsp_document_highlight_enabled = 0
+let g:lsp_fold_enabled = 0
+
+function! s:on_lsp_buffer_enabled() abort
+    setlocal omnifunc=lsp#complete
+    setlocal signcolumn=yes
+    if exists('+tagfunc') | setlocal tagfunc=lsp#tagfunc | endif
+    nmap <buffer> gd <plug>(lsp-definition)
+    nmap <buffer> gs <plug>(lsp-document-symbol-search)
+    nmap <buffer> gS <plug>(lsp-workspace-symbol-search)
+    nmap <buffer> gr <plug>(lsp-references)
+    nmap <buffer> gi <plug>(lsp-implementation)
+    nmap <buffer> gT <plug>(lsp-type-definition)
+    nmap <buffer> <leader>rn <plug>(lsp-rename)
+    nmap <buffer> [g <plug>(lsp-previous-diagnostic)
+    nmap <buffer> ]g <plug>(lsp-next-diagnostic)
+    nmap <buffer> K <plug>(lsp-hover)
+    " nnoremap <buffer> <expr><c-f> lsp#scroll(+5)
+    " nnoremap <buffer> <expr><c-d> lsp#scroll(-5)
+
+    " let g:lsp_format_sync_timeout = 1000
+    " autocmd! BufWritePre *.py call execute('LspDocumentFormatSync')
+    " autocmd! BufWritePre *.rs,*.go call execute('LspDocumentFormatSync')
+endfunction
+
+augroup lsp_install
+    au!
+    " call s:on_lsp_buffer_enabled only for languages that has the server registered.
+    autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
+augroup END
 
 " if getcwd() =~# '^\(/some/safe/path/\|/another/safe/path/\)'
 if getcwd() =~# '^\(/home/cristian/Documents/workspace/\)'

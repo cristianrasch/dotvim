@@ -64,6 +64,15 @@
 [submodule "pack/vendor/start/editorconfig"]
 	path = pack/vendor/start/editorconfig
 	url = https://github.com/editorconfig/editorconfig-vim.git
-[submodule "pack/vendor/start/coc"]
-	path = pack/vendor/start/coc
-	url = https://github.com/neoclide/coc.nvim.git
+[submodule "pack/vendor/start/lsp"]
+	path = pack/vendor/start/lsp
+	url = https://github.com/prabirshrestha/vim-lsp.git
+[submodule "pack/vendor/start/lsp-settings"]
+	path = pack/vendor/start/lsp-settings
+	url = https://github.com/mattn/vim-lsp-settings.git
+[submodule "pack/vendor/start/asyncomplete"]
+	path = pack/vendor/start/asyncomplete
+	url = https://github.com/prabirshrestha/asyncomplete.vim.git
+[submodule "pack/vendor/start/asyncomplete-lsp"]
+	path = pack/vendor/start/asyncomplete-lsp
+	url = https://github.com/prabirshrestha/asyncomplete-lsp.vim.git
