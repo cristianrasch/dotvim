@@ -344,11 +344,11 @@ function! s:on_lsp_buffer_enabled() abort
     nmap <buffer> gi <plug>(lsp-implementation)
     nmap <buffer> gT <plug>(lsp-type-definition)
     nmap <buffer> <leader>rn <plug>(lsp-rename)
-    nmap <buffer> [g <plug>(lsp-previous-diagnostic)
-    nmap <buffer> ]g <plug>(lsp-next-diagnostic)
+    " nmap <buffer> [g <plug>(lsp-previous-diagnostic)
+    " nmap <buffer> ]g <plug>(lsp-next-diagnostic)
     nmap <buffer> K <plug>(lsp-hover)
-    " nnoremap <buffer> <expr><c-f> lsp#scroll(+5)
-    " nnoremap <buffer> <expr><c-d> lsp#scroll(-5)
+    nnoremap <buffer> <expr><S-d> lsp#scroll(+5)
+    nnoremap <buffer> <expr><S-u> lsp#scroll(-5)
 
     " let g:lsp_format_sync_timeout = 1000
     " autocmd! BufWritePre *.py call execute('LspDocumentFormatSync')
