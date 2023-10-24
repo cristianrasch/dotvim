@@ -347,8 +347,8 @@ function! s:on_lsp_buffer_enabled() abort
     " nmap <buffer> [g <plug>(lsp-previous-diagnostic)
     " nmap <buffer> ]g <plug>(lsp-next-diagnostic)
     nmap <buffer> K <plug>(lsp-hover)
-    nnoremap <buffer> <expr><S-d> lsp#scroll(+5)
-    nnoremap <buffer> <expr><S-u> lsp#scroll(-5)
+    nnoremap <buffer> <expr><M-d> lsp#scroll(+5)
+    nnoremap <buffer> <expr><M-u> lsp#scroll(-5)
 
     " let g:lsp_format_sync_timeout = 1000
     " autocmd! BufWritePre *.py call execute('LspDocumentFormatSync')
