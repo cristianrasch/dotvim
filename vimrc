@@ -327,7 +327,7 @@ let g:ale_fixers = {
 :nmap [E :ALEFirst
 
 let g:lsp_diagnostics_enabled = 0
-let g:lsp_settings_filetype_python = ['jedi-language-server']
+let g:lsp_settings_filetype_python = ['pylsp']
 " let g:lsp_settings_filetype_python = ['jedi-language-server', 'ruff-lsp']
 let g:lsp_settings_filetype_ruby = ['ruby-lsp']
 let g:lsp_document_highlight_enabled = 0
@@ -338,6 +338,7 @@ function! s:on_lsp_buffer_enabled() abort
     setlocal signcolumn=yes
     if exists('+tagfunc') | setlocal tagfunc=lsp#tagfunc | endif
     nmap <buffer> gd <plug>(lsp-definition)
+    nmap <buffer> gD <plug>(lsp-declaration)
     nmap <buffer> gs <plug>(lsp-document-symbol-search)
     nmap <buffer> gS <plug>(lsp-workspace-symbol-search)
     nmap <buffer> gr <plug>(lsp-references)
