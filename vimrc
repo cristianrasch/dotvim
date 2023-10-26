@@ -328,7 +328,6 @@ let g:ale_fixers = {
 
 let g:lsp_diagnostics_enabled = 0
 let g:lsp_settings_filetype_python = ['pylsp']
-" let g:lsp_settings_filetype_python = ['jedi-language-server', 'ruff-lsp']
 let g:lsp_settings_filetype_ruby = ['ruby-lsp']
 let g:lsp_document_highlight_enabled = 0
 let g:lsp_fold_enabled = 0
