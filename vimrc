@@ -334,7 +334,7 @@ let g:airline#extensions#ale#enabled = 1
 :nmap ]E :ALELast
 :nmap [E :ALEFirst
 :nmap gd :ALEGoToDefinition<CR>
-:nmap gr :ALEFindReferences<CR>
+:nmap gr :ALEFindReferences -quickfix<CR>:copen<CR>
 :nmap gh :ALEHover<CR>
 :nmap gs :ALESymbolSearch -relative<space>
 
