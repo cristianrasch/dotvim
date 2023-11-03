@@ -319,10 +319,10 @@ let g:ale_use_global_executables = 1
 " let g:ale_lint_on_text_changed = 'never'
 " let g:ale_lint_on_insert_leave = 0
 let g:ale_linters_explicit = 1
-let g:ale_completion_enabled = 1
+" let g:ale_completion_enabled = 1
 " ALE provides an omni-completion function you can use for triggering completion manually with:
 " <C-x><C-o>
-set omnifunc=ale#completion#OmniFunc
+" set omnifunc=ale#completion#OmniFunc
 let g:ale_fix_on_save = 1
 let g:ale_fixers = {
 \   '*': ['trim_whitespace', 'remove_trailing_lines'],
@@ -333,10 +333,54 @@ let g:airline#extensions#ale#enabled = 1
 :nmap [e :ALEPreviousWrap<CR>
 :nmap ]E :ALELast
 :nmap [E :ALEFirst
-:nmap gd :ALEGoToDefinition<CR>
-:nmap gr :ALEFindReferences -quickfix<CR>:copen<CR>
-:nmap gh :ALEHover<CR>
-:nmap gs :ALESymbolSearch -relative<space>
+" :nmap gd :ALEGoToDefinition<CR>
+" :nmap gr :ALEFindReferences -quickfix<CR>:copen<CR>
+" :nmap gh :ALEHover<CR>
+" :nmap gs :ALESymbolSearch -relative<space>
+
+" let g:lsp_diagnostics_enabled = 0         " disable diagnostics support
+let g:lsp_fold_enabled = 0
+let g:lsp_document_highlight_enabled = 0
+let g:lsp_settings_filetype_python = ['pylsp']
+
+function! s:on_lsp_buffer_enabled() abort
+    setlocal omnifunc=lsp#complete
+    setlocal signcolumn=yes
+    if exists('+tagfunc') | setlocal tagfunc=lsp#tagfunc | endif
+    nmap <buffer> gd <plug>(lsp-definition)
+    nmap <buffer> gD <plug>(lsp-declaration)
+    nmap <buffer> gs <plug>(lsp-document-symbol-search)
+    nmap <buffer> gS <plug>(lsp-workspace-symbol-search)
+    nmap <buffer> gr <plug>(lsp-references)
+    nmap <buffer> gI <plug>(lsp-implementation)
+    nmap <buffer> gT <plug>(lsp-type-definition)
+    nmap <buffer> <leader>rn <plug>(lsp-rename)
+    nmap <buffer> [g <plug>(lsp-previous-diagnostic)
+    nmap <buffer> ]g <plug>(lsp-next-diagnostic)
+    nmap <buffer> K <plug>(lsp-hover)
+    nnoremap <buffer> <expr><leader>d lsp#scroll(+10)
+    nnoremap <buffer> <expr><leader>u lsp#scroll(-10)
+
+    " let g:lsp_format_sync_timeout = 1000
+    " autocmd! BufWritePre *.py call execute('LspDocumentFormatSync')
+endfunction
+
+augroup lsp_install
+    au!
+    " call s:on_lsp_buffer_enabled only for languages that has the server registered.
+    autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
+augroup END
+
+" Tab completion
+inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+inoremap <expr> <cr>    pumvisible() ? asyncomplete#close_popup() : "\<cr>"
+" let g:asyncomplete_auto_popup = 0
+" imap <c-@> <Plug>(asyncomplete_force_refresh)
+" allow modifying the completeopt variable, or it will
+" be overridden all the time
+let g:asyncomplete_auto_completeopt = 0
+set completeopt=menuone,noinsert,noselect,preview
 
 " if getcwd() =~# '^\(/some/safe/path/\|/another/safe/path/\)'
 if getcwd() =~# '^\(/home/cristian/Documents/workspace/\)'
@@ -358,7 +402,7 @@ let g:vim_vue_plugin_config = {
   \}
 
 " As-you-type autocomplete
-set completeopt=menu,menuone,preview,noselect,noinsert
+" set completeopt=menu,menuone,preview,noselect,noinsert
 " so that Vim's popup menu doesn't select the first completion item,
 " but rather just inserts the longest common text of all matches;
 " and the menu will come up even if there's only one match
