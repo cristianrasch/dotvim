@@ -311,6 +311,7 @@ let g:autotagStopAt='/home/cristian/Documents/workspace'
 " Updates your current buffer (saves it). Then it closes all open buffers, then it
 " reopens the last buffer
 command Bd :up | %bd | e#
+nmap <Leader>bd :Bd<CR>
 
 let g:ale_set_loclist = 0
 let g:ale_set_quickfix = 0
