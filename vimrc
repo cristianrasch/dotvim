@@ -407,3 +407,13 @@ let g:vim_vue_plugin_config = {
 " but rather just inserts the longest common text of all matches;
 " and the menu will come up even if there's only one match
 " set completeopt=longest,menuone
+
+map <leader>gb :GoBuild <CR>
+map <leader>gr :GoRun <CR>
+map <leader>gi :GoInstall <CR>
+map <leader>gt :GoTest <CR>
+map <leader>gtf :GoTestFunc <CR>
+map <leader>gd :GoDoc <CR>
+map <leader>gdb :GoDocBrowser <CR>
+map <leader>gi :GoImport <CR>
+map <leader>gr :GoRename <CR>
