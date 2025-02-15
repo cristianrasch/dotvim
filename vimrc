@@ -372,15 +372,17 @@ let g:airline#extensions#ale#enabled = 1
 " augroup END
 
 " Tab completion
-inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-inoremap <expr> <cr>    pumvisible() ? asyncomplete#close_popup() : "\<cr>"
-let g:asyncomplete_auto_popup = 0
-imap <c-@> <Plug>(asyncomplete_force_refresh)
+" inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
+" inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+" inoremap <expr> <cr>    pumvisible() ? asyncomplete#close_popup() : "\<cr>"
+" let g:asyncomplete_auto_popup = 0
+" imap <c-@> <Plug>(asyncomplete_force_refresh)
 " allow modifying the completeopt variable, or it will
 " be overridden all the time
-let g:asyncomplete_auto_completeopt = 0
-set completeopt=menuone,noinsert,noselect,preview
+" let g:asyncomplete_auto_completeopt = 0
+" set completeopt=menuone,noinsert,noselect,preview
+" To auto close preview window when completion is done.
+" autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
 
 " if getcwd() =~# '^\(/some/safe/path/\|/another/safe/path/\)'
 if getcwd() =~# '^\(/home/cristian/Documents/workspace/\)'

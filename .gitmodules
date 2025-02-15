@@ -58,15 +58,6 @@
 [submodule "pack/vendor/start/vue"]
 	path = pack/vendor/start/vue
 	url = https://github.com/leafOfTree/vim-vue-plugin
-[submodule "pack/vendor/start/editorconfig"]
-	path = pack/vendor/start/editorconfig
-	url = https://github.com/editorconfig/editorconfig-vim.git
-[submodule "pack/vendor/start/asyncomplete"]
-	path = pack/vendor/start/asyncomplete
-	url = https://github.com/prabirshrestha/asyncomplete.vim.git
 [submodule "pack/vendor/start/ale"]
 	path = pack/vendor/start/ale
 	url = https://github.com/dense-analysis/ale.git
-[submodule "pack/vendor/start/asyncomplete-ale"]
-	path = pack/vendor/start/asyncomplete-ale
-	url = https://github.com/andreypopp/asyncomplete-ale.vim.git
