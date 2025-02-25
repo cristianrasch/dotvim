@@ -7,6 +7,7 @@ set nocompatible
 syntax on
 filetype plugin on
 filetype indent on
+let mapleader = "\<Space>"
 
 " =====================================================
 " RUNTIME AND ENCODING
