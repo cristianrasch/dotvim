@@ -362,8 +362,8 @@ let g:user_emmet_settings = {
 " --------- Ctags Configuration ---------
 :set tags=.tags
 let g:autotagTagsFile=".tags"
+" let g:autotagCtagsCmd='ctags --recurse --languages=python .'
 " let g:autotagCtagsCmd='ctags -f .tags --languages=ruby,python .'
-" let g:autotagCtagsCmd='ctags --recurse --languages=ruby,python .'
 let g:autotagStopAt='/home/cristian/Documents/workspace'
 
 " --------- ALE (Asynchronous Lint Engine) ---------
