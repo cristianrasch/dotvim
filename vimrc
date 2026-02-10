@@ -129,6 +129,8 @@ set history=200
 set clipboard=unnamedplus
 set nrformats-=octal               " 0-prefixed numbers are still decimal
 set nrformats+=alpha               " Ctrl-X/Ctrl-A can increment letters too
+" Ctrl-X/Ctrl-A don't treat numbers prefixed with a `-` like negative numbers
+set nrformats+=unsigned
 set pastetoggle=<F3>
 set mouse=
 
