@@ -449,6 +449,8 @@ let g:airline#extensions#ale#enabled = 1
 " and the menu will come up even if there's only one match
 " set completeopt=longest,menuone
 
+" set completeopt+=fuzzy " v9.2+ only
+
 " --------- Vue.js Plugin Configuration ---------
 let g:vim_vue_plugin_config = {
   \'syntax': {

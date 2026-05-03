@@ -18,3 +18,4 @@ client
 filesystem
 stdlib
 async
+breakpoint
